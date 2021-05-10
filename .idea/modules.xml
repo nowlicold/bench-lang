@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/base/bench-lang-base.iml" filepath="$PROJECT_DIR$/base/bench-lang-base.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bench-lang-parent.iml" filepath="$PROJECT_DIR$/bench-lang-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/provider/bench-lang-provider.iml" filepath="$PROJECT_DIR$/provider/bench-lang-provider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/test/bench-lang-test.iml" filepath="$PROJECT_DIR$/test/bench-lang-test.iml" />
+    </modules>
+  </component>
+</project>
