@@ -1,5 +1,6 @@
 package com.bench.lang.base.system.utils;
 
+import java.io.File;
 import java.io.PrintWriter;
 import java.lang.management.ManagementFactory;
 import java.lang.management.OperatingSystemMXBean;
@@ -15,6 +16,7 @@ import java.util.List;
 import java.util.Map;
 
 import com.bench.lang.base.exception.BenchRuntimeException;
+import com.bench.lang.base.file.FilePathUtils;
 import com.bench.lang.base.instance.annotations.Singleton;
 import com.bench.lang.base.java.enums.JavaVersionEnum;
 import com.bench.lang.base.locale.utils.LocaleUtils;
@@ -54,6 +56,8 @@ public class SystemUtils extends org.apache.commons.lang3.SystemUtils {
 	public static final JvmSpecInfo getJvmSpecInfo() {
 		return JVM_SPEC_INFO;
 	}
+
+	private String benchTempPath;
 
 	/**
 	 * 取得Java Virtual Machine Implementation的信息。
@@ -923,6 +927,7 @@ public class SystemUtils extends org.apache.commons.lang3.SystemUtils {
 		private final String LINE_SEPARATOR = getSystemProperty("line.separator", false);
 		private final String PATH_SEPARATOR = getSystemProperty("path.separator", false);
 		private final String TEMP_PATH = getSystemProperty("java.io.tmpdir", false);
+		private String benchTempPath;
 
 		/**
 		 * 防止从外界创建此对象。
@@ -1012,7 +1017,16 @@ public class SystemUtils extends org.apache.commons.lang3.SystemUtils {
 		public final String getVersion() {
 			return OS_VERSION;
 		}
-
+		public final String getBenchTempPath() {
+			if (benchTempPath == null) {
+				benchTempPath = FilePathUtils.join(FilePathUtils.normalizePath(TEMP_PATH), "bench");
+				File benchTempPathFile = new File(benchTempPath);
+				if (!benchTempPathFile.exists()) {
+					benchTempPathFile.mkdirs();
+				}
+			}
+			return benchTempPath;
+		}
 		/**
 		 * 判断当前OS的类型。
 		 * 
@@ -1819,4 +1833,20 @@ public class SystemUtils extends org.apache.commons.lang3.SystemUtils {
 	public static String getPropOrEnv(String variableName) {
 		return getPropOrEnv(variableName, null);
 	}
+	/**
+	 * 返回bench的临时路径
+	 *
+	 * @return
+	 */
+	public final String getBenchTempPath() {
+		if (benchTempPath == null) {
+			benchTempPath = FilePathUtils.join(FilePathUtils.normalizePath(getSystemProperty("java.io.tmpdir", false)), "bench");
+			File benchTempPathFile = new File(benchTempPath);
+			if (!benchTempPathFile.exists()) {
+				benchTempPathFile.mkdirs();
+			}
+		}
+		return benchTempPath;
+	}
+
 }

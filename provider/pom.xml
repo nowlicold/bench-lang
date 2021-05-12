@@ -16,7 +16,6 @@
 		<dependency>
 			<groupId>com.bench.lang</groupId>
 			<artifactId>bench-lang-base</artifactId>
-			<version>1.4</version>
 		</dependency>
 	</dependencies>
 </project>

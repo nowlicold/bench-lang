@@ -19,6 +19,7 @@ import com.bench.lang.base.string.utils.StringUtils;
  * @version $Id: ArrayUtils.java,v 0.1 2009-5-21 上午12:15:47 cold Exp $
  */
 public class ArrayUtils extends org.apache.commons.lang3.ArrayUtils {
+	public static final ArrayUtils INSTNACE = new ArrayUtils();
 
 	/*
 	 * ========================================================================= = ==

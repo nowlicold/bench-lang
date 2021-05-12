@@ -46,6 +46,7 @@ import com.bench.lang.base.utils.PathMatchUtils;
  * @version $Id: ClassUtils.java, v 0.1 2018年10月25日 下午7:21:57 cold Exp $
  */
 public class ClassUtils extends org.apache.commons.lang3.ClassUtils {
+	public static final ClassUtils INSTANCE = new ClassUtils();
 
 	/** 资源文件的分隔符： <code>'/'</code>。 */
 	public static final char RESOURCE_SEPARATOR_CHAR = '/';

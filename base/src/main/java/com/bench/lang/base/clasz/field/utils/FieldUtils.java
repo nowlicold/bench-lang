@@ -28,6 +28,7 @@ import com.bench.lang.base.string.utils.StringUtils;
  * @version $Id: FieldUtils.java, v 0.1 2009-8-18 下午06:10:13 cold Exp $
  */
 public class FieldUtils {
+	public static final FieldUtils INSTANCE = new FieldUtils();
 
 	private static Field NULL_FIELD = null;
 	static {

@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.bench.lang</groupId>
 	<artifactId>bench-lang-test</artifactId>
-	<version>1.4</version>
+	<version>${bench.version}</version>
 	<packaging>jar</packaging>
 	<dependencies>
 		<dependency>
@@ -21,7 +21,7 @@
 		<dependency>
 			<groupId>com.bench.lang</groupId>
 			<artifactId>bench-lang-base</artifactId>
-			<version>1.4</version>
+			<version>${bench.version}</version>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>

@@ -3,6 +3,7 @@ package com.bench.lang.base.charset.utils;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
+import java.nio.charset.Charset;
 
 import org.mozilla.universalchardet.UniversalDetector;
 
@@ -19,6 +20,9 @@ import com.bench.lang.base.utils.Assert;
  * @version $Id: CharsetUtils.java, v 0.1 2018年8月1日 下午3:54:29 cold Exp $
  */
 public class CharsetUtils {
+	public static final Charset GBK = Charset.forName("GBK");
+
+	public static final Charset UTF_8 = Charset.forName("UTF-8");
 
 	/**
 	 * 是不是UTF-8编码
