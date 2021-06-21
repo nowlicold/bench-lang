@@ -3,9 +3,9 @@ package com.bench.lang.base.object;
 /**
  * 转换成字符串对象
  * 
- * @author chenbug
+ * @author cold
  * 
- * @version $Id: ToStringObject.java, v 0.1 2014-9-9 下午6:49:05 chenbug Exp $
+ * @version $Id: ToStringObject.java, v 0.1 2014-9-9 下午6:49:05 cold Exp $
  */
 public class ToStringObject {
 

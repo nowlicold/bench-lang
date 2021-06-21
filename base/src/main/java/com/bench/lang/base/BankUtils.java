@@ -6,7 +6,7 @@ import com.bench.lang.base.string.utils.StringUtils;
 /**
  * 银行工具类
  * 
- * @author chenbug
+ * @author cold
  *
  * @version $Id: BankUtils.java, v 0.1 2015年11月13日 上午11:26:04 Administrator Exp
  *          $

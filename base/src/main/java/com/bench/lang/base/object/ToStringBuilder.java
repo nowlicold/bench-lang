@@ -6,9 +6,9 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 /**
  * 将对象描述成String
  * 
- * @author chenbug
+ * @author cold
  * 
- * @version $Id: ToStringBuilder.java, v 0.1 2013-12-16 下午4:27:14 chenbug Exp $
+ * @version $Id: ToStringBuilder.java, v 0.1 2013-12-16 下午4:27:14 cold Exp $
  */
 public class ToStringBuilder {
 

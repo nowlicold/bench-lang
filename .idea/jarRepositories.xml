@@ -22,6 +22,11 @@
       <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
     </remote-repository>
     <remote-repository>
+      <option name="id" value="yuan-nexus-releases" />
+      <option name="name" value="Team Nexus Repository" />
+      <option name="url" value="http://192.168.1.151:1200/repository/maven-releases/" />
+    </remote-repository>
+    <remote-repository>
       <option name="id" value="yuan-nexus-snapshots" />
       <option name="name" value="yuan-nexus-snapshots" />
       <option name="url" value="http://192.168.1.151:1200/repository/maven-snapshots/" />

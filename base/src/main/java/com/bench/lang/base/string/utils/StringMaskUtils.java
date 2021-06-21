@@ -8,9 +8,9 @@ import com.bench.lang.base.number.utils.NumberUtils;
  * 
  * 字符串掩饰工具
  * 
- * @author chenbug
+ * @author cold
  * 
- * @version $Id: StringMaskUtils.java, v 0.1 2014-12-5 下午12:16:22 chenbug Exp $
+ * @version $Id: StringMaskUtils.java, v 0.1 2014-12-5 下午12:16:22 cold Exp $
  */
 public class StringMaskUtils {
 

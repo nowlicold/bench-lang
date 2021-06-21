@@ -16,9 +16,9 @@ import java.util.Date;
 
 /**
  * 
- * @author chenbug
+ * @author cold
  * 
- * @version $Id: ReflectionToStringBuilder.java, v 0.1 2013-12-16 下午4:03:18 chenbug Exp $
+ * @version $Id: ReflectionToStringBuilder.java, v 0.1 2013-12-16 下午4:03:18 cold Exp $
  */
 public class ReflectionToStringBuilder extends org.apache.commons.lang3.builder.ReflectionToStringBuilder {
 

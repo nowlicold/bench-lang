@@ -19,9 +19,9 @@ import java.util.regex.Pattern;
 /**
  * 身份证验证
  * 
- * @author chenbug
+ * @author cold
  * 
- * @version $Id: IDCardNoValidator.java, v 0.1 2013-5-28 下午5:22:24 chenbug Exp $
+ * @version $Id: IDCardNoValidator.java, v 0.1 2013-5-28 下午5:22:24 cold Exp $
  */
 public class IDCardNoValidator {
 
