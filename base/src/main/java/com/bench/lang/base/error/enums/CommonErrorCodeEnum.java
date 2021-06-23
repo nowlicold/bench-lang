@@ -43,7 +43,7 @@ public enum CommonErrorCodeEnum implements ErrorEnum {
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see com.bench.common.enums.EnumBase#message()
+	 * @see com.bench.lang.base.enums.EnumBase#message()
 	 */
 	public String message() {
 		// TODO Auto-generated method stub
@@ -53,7 +53,7 @@ public enum CommonErrorCodeEnum implements ErrorEnum {
 	/*
 	 * (non-Javadoc)
 	 * 
-	 * @see com.bench.common.enums.EnumBase#value()
+	 * @see com.bench.lang.base.enums.EnumBase#value()
 	 */
 	public Number value() {
 		// TODO Auto-generated method stub
