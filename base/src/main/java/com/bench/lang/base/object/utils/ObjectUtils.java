@@ -16,9 +16,9 @@ import com.bench.lang.base.array.utils.ArrayUtils;
 import com.bench.lang.base.bean.utils.PropertyUtils;
 import com.bench.lang.base.clasz.field.utils.FieldUtils;
 import com.bench.lang.base.clasz.utils.ClassUtils;
-import com.bench.lang.base.error.enums.CommonErrorCodeEnum;
-import com.bench.lang.base.exception.BenchRuntimeException;
 import com.bench.lang.base.string.utils.StringUtils;
+import com.yuan.common.enums.error.CommonErrorCodeEnum;
+import com.yuan.common.exception.BenchRuntimeException;
 
 /**
  * @author cold
@@ -324,7 +324,7 @@ public class ObjectUtils extends org.apache.commons.lang3.ObjectUtils {
 			oi = new ObjectInputStream(bi);
 			return (T) oi.readObject();
 		} catch (Exception e) {
-			throw new BenchRuntimeException("深拷贝对象异常，返回null,object=" + obj, e);
+			throw new BenchRuntimeException(CommonErrorCodeEnum.SYSTEM_ERROR,"深拷贝对象异常，返回null,object=" + obj, e);
 		} finally {
 			if (oi != null) {
 				try {

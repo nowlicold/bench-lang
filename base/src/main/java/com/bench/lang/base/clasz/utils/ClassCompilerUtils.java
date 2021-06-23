@@ -1,5 +1,8 @@
 package com.bench.lang.base.clasz.utils;
 
+import com.yuan.common.enums.error.CommonErrorCodeEnum;
+import com.yuan.common.exception.BenchRuntimeException;
+
 import java.io.File;
 import java.net.URI;
 import java.net.URISyntaxException;
@@ -10,9 +13,6 @@ import javax.tools.JavaFileObject;
 import javax.tools.SimpleJavaFileObject;
 import javax.tools.StandardJavaFileManager;
 import javax.tools.ToolProvider;
-
-import com.bench.lang.base.error.enums.CommonErrorCodeEnum;
-import com.bench.lang.base.exception.BenchRuntimeException;
 
 /**
  * 类编译的工具类。

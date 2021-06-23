@@ -6,9 +6,10 @@ import java.util.EnumSet;
 import java.util.List;
 
 import com.bench.lang.base.array.utils.ArrayUtils;
-import com.bench.lang.base.exception.BenchRuntimeException;
 import com.bench.lang.base.list.utils.ListUtils;
 import com.bench.lang.base.string.utils.StringUtils;
+import com.yuan.common.enums.error.CommonErrorCodeEnum;
+import com.yuan.common.exception.BenchRuntimeException;
 
 /**
  * 枚举工具类
@@ -29,7 +30,7 @@ public class EnumUtils extends org.apache.commons.lang3.EnumUtils {
 		try {
 			enumClass = Class.forName(enumClassName);
 		} catch (ClassNotFoundException e) {
-			throw new BenchRuntimeException("无法找到类:" + enumClassName);
+			throw new BenchRuntimeException(CommonErrorCodeEnum.SYSTEM_ERROR,"无法找到类:" + enumClassName);
 		}
 		EnumSet set = EnumSet.allOf(enumClass);
 		return set.toArray();

@@ -19,13 +19,13 @@ import java.util.StringTokenizer;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import com.yuan.common.enums.error.CommonErrorCodeEnum;
+import com.yuan.common.exception.BenchRuntimeException;
 import org.apache.commons.lang3.CharUtils;
 
 import com.bench.lang.base.array.utils.ArrayUtils;
 import com.bench.lang.base.bean.utils.PropertyUtils;
 import com.bench.lang.base.collection.utils.CollectionUtils;
-import com.bench.lang.base.error.enums.CommonErrorCodeEnum;
-import com.bench.lang.base.exception.BenchRuntimeException;
 import com.bench.lang.base.instance.annotations.Singleton;
 import com.bench.lang.base.list.utils.ListUtils;
 import com.bench.lang.base.object.utils.ObjectUtils;
@@ -194,7 +194,7 @@ public class StringUtils extends org.apache.commons.lang3.StringUtils {
 		try {
 			return string.getBytes(charset);
 		} catch (UnsupportedEncodingException e) {
-			throw new BenchRuntimeException("不支持的编码，charset=" + charset, e);
+			throw new BenchRuntimeException(CommonErrorCodeEnum.SYSTEM_ERROR,"不支持的编码，charset=" + charset, e);
 		}
 
 	}
@@ -6132,7 +6132,7 @@ public class StringUtils extends org.apache.commons.lang3.StringUtils {
 			}
 			return stringList.toArray(new String[stringList.size()]);
 		} catch (IOException e) {
-			throw new BenchRuntimeException("将byte数组转换为String数组异常", e);
+			throw new BenchRuntimeException(CommonErrorCodeEnum.SYSTEM_ERROR,"将byte数组转换为String数组异常", e);
 		}
 	}
 

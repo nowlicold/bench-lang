@@ -5,11 +5,11 @@ import java.util.List;
 import java.util.Set;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import com.bench.lang.base.error.enums.CommonErrorCodeEnum;
-import com.bench.lang.base.exception.BenchRuntimeException;
 import com.bench.lang.base.math.permutation.PermutationEachVisitor;
 import com.bench.lang.base.math.permutation.PermutationEntry;
 import com.bench.lang.base.math.permutation.PermutationGenerator;
+import com.yuan.common.enums.error.CommonErrorCodeEnum;
+import com.yuan.common.exception.BenchRuntimeException;
 
 /**
  * 排列工具类

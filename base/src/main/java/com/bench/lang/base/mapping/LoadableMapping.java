@@ -3,8 +3,9 @@ package com.bench.lang.base.mapping;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-import com.bench.lang.base.exception.BenchRuntimeException;
 import com.bench.lang.base.object.FinalObject;
+import com.yuan.common.enums.error.CommonErrorCodeEnum;
+import com.yuan.common.exception.BenchRuntimeException;
 
 /**
  * 可以加载的映射,注意，这个不是映射，只是为了方便建立组件映射
@@ -94,7 +95,7 @@ public abstract class LoadableMapping<K, V> {
 			V value = load(key);
 			// 如果value不允许为空，但是加载的value是空，则抛异常
 			if (!this.valueNullable && value == null) {
-				throw new BenchRuntimeException("加载的值为null,key=" + key);
+				throw new BenchRuntimeException(CommonErrorCodeEnum.SYSTEM_ERROR,"加载的值为null,key=" + key);
 			}
 
 			cachedObject = new FinalObject<V>(value);

@@ -2,9 +2,10 @@ package com.bench.lang.base.base64.utils;
 
 import java.io.UnsupportedEncodingException;
 
+import com.yuan.common.enums.error.CommonErrorCodeEnum;
+import com.yuan.common.exception.BenchRuntimeException;
 import org.apache.commons.codec.binary.Base64;
 
-import com.bench.lang.base.exception.BenchRuntimeException;
 import com.bench.lang.base.string.utils.StringUtils;
 
 /**
@@ -101,7 +102,7 @@ public class BASE64Utils {
 		try {
 			return new String(Base64.decodeBase64(content), charset);
 		} catch (UnsupportedEncodingException e) {
-			throw new BenchRuntimeException("不支持的编码charset=" + charset, e);
+			throw new BenchRuntimeException(CommonErrorCodeEnum.SYSTEM_ERROR,"不支持的编码charset=" + charset, e);
 		}
 	}
 

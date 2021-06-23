@@ -17,9 +17,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.Properties;
 
-import com.bench.lang.base.error.enums.CommonErrorCodeEnum;
-import com.bench.lang.base.exception.BenchRuntimeException;
 import com.bench.lang.base.properties.utils.PropertiesUtils;
+import com.yuan.common.enums.error.CommonErrorCodeEnum;
+import com.yuan.common.exception.BenchRuntimeException;
 
 /**
  * <br/>

@@ -11,11 +11,12 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
+import com.yuan.common.enums.error.CommonErrorCodeEnum;
+import com.yuan.common.exception.BenchRuntimeException;
 import org.springframework.core.annotation.MergedAnnotation;
 import org.springframework.core.type.classreading.MetadataReader;
 
 import com.bench.lang.base.clasz.utils.ClassUtils;
-import com.bench.lang.base.exception.BenchRuntimeException;
 import com.bench.lang.base.instance.acceptor.MetadataReaderAcceptor;
 import com.bench.lang.base.instance.acceptor.SimpleMetadataReaderAcceptor;
 import com.bench.lang.base.instance.annotations.Default;
@@ -82,9 +83,7 @@ public class BenchClassFactory {
 	/**
 	 * 返回包含注解annotationClass的所有实现类<br>
 	 * 
-	 * @param <T>
 	 * @param annotationClass
-	 * @param includeAbstract
 	 * @return
 	 */
 	public static List<Class<?>> getImplementsClassWithAnnotation(Class<? extends Annotation> annotationClass) {
@@ -106,12 +105,10 @@ public class BenchClassFactory {
 	 * interfaceClass和annotationClass不能同时为null<br>
 	 * 注意，这个方法不使用缓存，因为接口+注解，可能有很多组合
 	 * 
-	 * @param <T>
 	 * @param interfaceClass
 	 *            不为null，则判断
 	 * @param annotationClass
 	 *            不为null，则判断
-	 * @param includeAbstract
 	 * @return
 	 */
 	public static List<Class<?>> getImplementsClass(Class<?> interfaceClass, Class<? extends Annotation> annotationClass) {
@@ -167,7 +164,6 @@ public class BenchClassFactory {
 	 * 基于缓存
 	 * 
 	 * @param <T>
-	 * @param interfaceClass
 	 * @return
 	 */
 	public static <T> List<Class<? extends T>> getImplementsClasse(MetadataReaderAcceptor acceptor) {
@@ -194,8 +190,6 @@ public class BenchClassFactory {
 	 * 基于Order排序<br>
 	 * 注意，这个方法不使用缓存
 	 * 
-	 * @param <T>
-	 * @param interfaceClass
 	 * @return
 	 */
 	public static Class<?> getFirstImplementsClasseWithAnnotation(Class<? extends Annotation> annotationClass) {
@@ -210,12 +204,10 @@ public class BenchClassFactory {
 	 * 2、无Default，按照Order排序，取第一个<br>
 	 * 无缓存
 	 * 
-	 * @param <T>
 	 * @param interfaceClass
 	 *            不能为null
 	 * @param annotationClass
 	 *            不为null，则判断
-	 * @param includeAbstract
 	 * @return
 	 */
 	public static Class<?> getFirstImplementsClass(Class<?> interfaceClass, Class<? extends Annotation> annotationClass) {
@@ -238,7 +230,7 @@ public class BenchClassFactory {
 			defaultedMetadataList.forEach(p -> {
 				defaultedClassNames.add(p.getClassMetadata().getClassName());
 			});
-			throw new BenchRuntimeException("查找到多个包含Default注解的实现类，interfaceClass=" + interfaceClass + ",implementsClasses=" + defaultedClassNames);
+			throw new BenchRuntimeException(CommonErrorCodeEnum.SYSTEM_ERROR,"查找到多个包含Default注解的实现类，interfaceClass=" + interfaceClass + ",implementsClasses=" + defaultedClassNames);
 		}
 		// 刚好一个默认值，则返回它
 		if (defaultedMetadataList.size() == 1) {
@@ -263,12 +255,10 @@ public class BenchClassFactory {
 	 * interfaceClass不能为空， annotationClass可以为null <br>
 	 * 无缓存
 	 * 
-	 * @param <T>
 	 * @param interfaceClass
 	 *            不能为null
 	 * @param annotationClass
 	 *            不为null，则判断
-	 * @param includeAbstract
 	 * @return
 	 */
 	public static Class<?> getFirstImplementsClass(List<String> packagesNames, Class<?> interfaceClass, Class<? extends Annotation> annotationClass,
@@ -316,7 +306,7 @@ public class BenchClassFactory {
 			defaultedMetadataList.forEach(p -> {
 				defaultedClassNames.add(p.getClassMetadata().getClassName());
 			});
-			throw new BenchRuntimeException("查找到多个包含Default注解的实现类，interfaceClass=" + interfaceClass + ",implementsClasses=" + defaultedClassNames);
+			throw new BenchRuntimeException(CommonErrorCodeEnum.SYSTEM_ERROR,"查找到多个包含Default注解的实现类，interfaceClass=" + interfaceClass + ",implementsClasses=" + defaultedClassNames);
 		}
 		// 刚好一个默认值，则返回它
 		if (defaultedMetadataList.size() == 1) {
@@ -335,14 +325,7 @@ public class BenchClassFactory {
 	 * 返回实现了interfaceClass接口的第一个类，类包含注解annotationClass<br>
 	 * interfaceClass不能为空， annotationClass可以为null <br>
 	 * 无缓存
-	 * 
-	 * @param <T>
-	 * @param interfaceClass
-	 *            不能为null
-	 * @param annotationClass
-	 *            不为null，则判断
-	 * @param includeAbstract
-	 * @return
+	 *
 	 */
 	public static Class<?> getFirstImplementsClass(MetadataReaderAcceptor acceptor) {
 		List<MetadataReader> matchedMetadataList = BenchClassMetadataFactory.getByAcceptor(acceptor);
@@ -364,7 +347,7 @@ public class BenchClassFactory {
 			defaultedMetadataList.forEach(p -> {
 				defaultedClassNames.add(p.getClassMetadata().getClassName());
 			});
-			throw new BenchRuntimeException("查找到多个包含Default注解的实现类，acceptor=" + acceptor + ",implementsClasses=" + defaultedClassNames);
+			throw new BenchRuntimeException(CommonErrorCodeEnum.SYSTEM_ERROR,"查找到多个包含Default注解的实现类，acceptor=" + acceptor + ",implementsClasses=" + defaultedClassNames);
 		}
 		// 刚好一个默认值，则返回它
 		if (defaultedMetadataList.size() == 1) {
@@ -393,7 +376,7 @@ public class BenchClassFactory {
 			try {
 				clasz = ClassUtils.forName(className);
 			} catch (ClassNotFoundException e) {
-				throw new BenchRuntimeException("无法找到类,class=" + className);
+				throw new BenchRuntimeException(CommonErrorCodeEnum.SYSTEM_ERROR,"无法找到类,class=" + className);
 			}
 			loadedClassMap.putIfAbsent(className, clasz);
 		}

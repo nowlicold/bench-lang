@@ -15,7 +15,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.bench.lang.base.exception.BenchRuntimeException;
 import com.bench.lang.base.file.FilePathUtils;
 import com.bench.lang.base.instance.annotations.Singleton;
 import com.bench.lang.base.java.enums.JavaVersionEnum;
@@ -24,6 +23,8 @@ import com.bench.lang.base.string.utils.StringEscapeUtils;
 import com.bench.lang.base.string.utils.StringUtils;
 import com.bench.lang.base.system.enums.OsTypeEnum;
 import com.bench.lang.base.utils.PathMatchUtils;
+import com.yuan.common.enums.error.CommonErrorCodeEnum;
+import com.yuan.common.exception.BenchRuntimeException;
 
 /**
  * 系统工具类
@@ -192,7 +193,7 @@ public class SystemUtils extends org.apache.commons.lang3.SystemUtils {
 				}
 			}
 		} catch (SocketException e) {
-			throw new BenchRuntimeException("获取本机网卡信息异常", e);
+			throw new BenchRuntimeException(CommonErrorCodeEnum.SYSTEM_ERROR,"获取本机网卡信息异常", e);
 		}
 		return ipList;
 
@@ -248,7 +249,7 @@ public class SystemUtils extends org.apache.commons.lang3.SystemUtils {
 				}
 			}
 		} catch (SocketException e) {
-			throw new BenchRuntimeException("获取本机网卡信息异常", e);
+			throw new BenchRuntimeException(CommonErrorCodeEnum.SYSTEM_ERROR,"获取本机网卡信息异常", e);
 		}
 		return resultMap;
 	}

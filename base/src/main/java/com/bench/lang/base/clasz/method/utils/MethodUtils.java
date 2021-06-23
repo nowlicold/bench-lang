@@ -9,8 +9,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.bench.lang.base.clasz.field.utils.FieldUtils;
-import com.bench.lang.base.exception.BenchRuntimeException;
 import com.bench.lang.base.string.utils.StringUtils;
+import com.yuan.common.enums.error.CommonErrorCodeEnum;
+import com.yuan.common.exception.BenchRuntimeException;
 
 /**
  * @author cold
@@ -40,7 +41,7 @@ public class MethodUtils extends org.apache.commons.lang3.reflect.MethodUtils {
 		try {
 			return method.invoke(object, args);
 		} catch (Exception e) {
-			throw new BenchRuntimeException("调用方法异常,object=" + object + ",method=" + method + ",args=" + args, e);
+			throw new BenchRuntimeException(CommonErrorCodeEnum.SYSTEM_ERROR,"调用方法异常,object=" + object + ",method=" + method + ",args=" + args, e);
 		}
 	}
 
@@ -49,14 +50,13 @@ public class MethodUtils extends org.apache.commons.lang3.reflect.MethodUtils {
 	 * 
 	 * @param object
 	 * @param method
-	 * @param args
 	 * @return
 	 */
 	public static Object invoke(Object object, Method method) {
 		try {
 			return method.invoke(object);
 		} catch (Exception e) {
-			throw new BenchRuntimeException("调用方法异常,object=" + object + ",method=" + method, e);
+			throw new BenchRuntimeException(CommonErrorCodeEnum.SYSTEM_ERROR,"调用方法异常,object=" + object + ",method=" + method, e);
 		}
 	}
 
@@ -94,7 +94,6 @@ public class MethodUtils extends org.apache.commons.lang3.reflect.MethodUtils {
 	 * 获取最近的方法
 	 * 
 	 * @param clasz
-	 * @param methodName
 	 * @return
 	 */
 	public static Method getNearstMethod(Class<?> clasz, Method method) {
@@ -161,7 +160,6 @@ public class MethodUtils extends org.apache.commons.lang3.reflect.MethodUtils {
 	/**
 	 * 获取当前类继承的接口上的含有annotationClass注解的方法
 	 * 
-	 * @param field
 	 * @return
 	 */
 	public static List<Method> getInterfaceMethodContainsAnnotation(Class<?> clasz, Class<? extends Annotation> annotationClass) {

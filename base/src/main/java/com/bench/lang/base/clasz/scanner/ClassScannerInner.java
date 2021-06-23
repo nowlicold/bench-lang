@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.util.HashSet;
 import java.util.Set;
 
+import com.yuan.common.enums.error.CommonErrorCodeEnum;
+import com.yuan.common.exception.BenchRuntimeException;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.core.io.support.ResourcePatternResolver;
@@ -15,8 +17,6 @@ import org.springframework.util.SystemPropertyUtils;
 import com.bench.lang.base.accept.Acceptor;
 import com.bench.lang.base.clasz.visit.ClassMetadataVisitor;
 import com.bench.lang.base.clasz.visit.SimpleClassVisitor;
-import com.bench.lang.base.error.enums.CommonErrorCodeEnum;
-import com.bench.lang.base.exception.BenchRuntimeException;
 import com.bench.lang.base.string.utils.StringUtils;
 
 /**
@@ -62,7 +62,7 @@ public class ClassScannerInner {
 
 	/**
 	 * @param basePackages
-	 * @param filter
+	 * @param classAcceptor
 	 * @param visitor
 	 */
 	public void scan(String[] basePackages, Acceptor<MetadataReader> classAcceptor, SimpleClassVisitor visitor) {
@@ -87,7 +87,7 @@ public class ClassScannerInner {
 
 	/**
 	 * @param basePackage
-	 * @param filter
+	 * @param classAcceptor
 	 * @param visitor
 	 */
 	public void scan(String basePackage, Acceptor<MetadataReader> classAcceptor, SimpleClassVisitor visitor) {
@@ -131,7 +131,7 @@ public class ClassScannerInner {
 				}
 			}
 		} catch (IOException ex) {
-			throw new BenchRuntimeException("I/O failure during classpath scanning", ex);
+			throw new BenchRuntimeException(CommonErrorCodeEnum.SYSTEM_ERROR,"I/O failure during classpath scanning", ex);
 		}
 	}
 }

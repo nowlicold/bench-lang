@@ -7,9 +7,9 @@ import java.net.URL;
 import java.net.URLDecoder;
 import java.net.URLEncoder;
 
-import com.bench.lang.base.error.enums.CommonErrorCodeEnum;
-import com.bench.lang.base.exception.BenchRuntimeException;
 import com.bench.lang.base.string.utils.StringUtils;
+import com.yuan.common.enums.error.CommonErrorCodeEnum;
+import com.yuan.common.exception.BenchRuntimeException;
 
 /**
  * url工具类
@@ -70,7 +70,7 @@ public class UrlUtils {
 		try {
 			return URLEncoder.encode(url, encoding);
 		} catch (Exception e) {
-			throw new BenchRuntimeException("编码url异常，url=" + url + ",encoding=" + encoding, e);
+			throw new BenchRuntimeException(CommonErrorCodeEnum.SYSTEM_ERROR,"编码url异常，url=" + url + ",encoding=" + encoding, e);
 		}
 	}
 
@@ -85,7 +85,7 @@ public class UrlUtils {
 		try {
 			return URLDecoder.decode(url, encoding);
 		} catch (Exception e) {
-			throw new BenchRuntimeException("解码url异常，url=" + url + ",encoding=" + encoding);
+			throw new BenchRuntimeException(CommonErrorCodeEnum.SYSTEM_ERROR,"解码url异常，url=" + url + ",encoding=" + encoding);
 		}
 	}
 

@@ -1,7 +1,7 @@
 package com.bench.lang.base.convert;
 
-import com.bench.lang.base.error.enums.CommonErrorCodeEnum;
-import com.bench.lang.base.exception.BenchRuntimeException;
+import com.yuan.common.enums.error.CommonErrorCodeEnum;
+import com.yuan.common.exception.BenchRuntimeException;
 
 /**
  * 表示转换失败的异常. 转换失败时, 可以指定一个建议的默认值.
@@ -28,7 +28,7 @@ public class ConvertFailedException extends BenchRuntimeException {
 	 *            详细信息
 	 */
 	public ConvertFailedException(String message) {
-		super(message);
+		super(CommonErrorCodeEnum.SYSTEM_ERROR,message);
 	}
 
 	/**
@@ -50,7 +50,7 @@ public class ConvertFailedException extends BenchRuntimeException {
 	 *            异常的起因
 	 */
 	public ConvertFailedException(String message, Throwable cause) {
-		super(message, cause);
+		super(CommonErrorCodeEnum.SYSTEM_ERROR,message, cause);
 	}
 
 	/**

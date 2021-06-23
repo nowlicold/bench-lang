@@ -6,10 +6,10 @@ import java.util.Collections;
 import java.util.List;
 
 import com.bench.lang.base.accept.Acceptor;
-import com.bench.lang.base.error.enums.CommonErrorCodeEnum;
-import com.bench.lang.base.error.enums.ErrorEnum;
-import com.bench.lang.base.exception.BenchRuntimeException;
 import com.bench.lang.base.string.utils.StringUtils;
+import com.yuan.common.enums.error.CommonErrorCodeEnum;
+import com.yuan.common.enums.error.ErrorEnum;
+import com.yuan.common.exception.BenchRuntimeException;
 
 /**
  * Bench的Class工具类，快捷访问com.bench开头的所有类
@@ -53,7 +53,7 @@ public class BenchClassUtils {
 	 */
 	public static List<Class<?>> getChildClasses(Class<?> parentClass) {
 		if (!isBenchClass(parentClass.getName())) {
-			throw new BenchRuntimeException(CommonErrorCodeEnum.SYSTEM_ERROR, "非Bench Class,无法获取子类");
+			throw new BenchRuntimeException(CommonErrorCodeEnum.SYSTEM_ERROR.errorCode(), "非Bench Class,无法获取子类");
 		}
 		List<Class<?>> classes = new ArrayList<Class<?>>();
 		for (Class<?> clasz : getClasses()) {

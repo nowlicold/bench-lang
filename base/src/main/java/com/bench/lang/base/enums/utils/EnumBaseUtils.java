@@ -14,11 +14,11 @@ import com.bench.lang.base.array.utils.ArrayUtils;
 import com.bench.lang.base.clasz.method.utils.MethodUtils;
 import com.bench.lang.base.clasz.utils.BenchClassUtils;
 import com.bench.lang.base.enums.EnumBase;
-import com.bench.lang.base.error.enums.CommonErrorCodeEnum;
-import com.bench.lang.base.exception.BenchRuntimeException;
 import com.bench.lang.base.list.utils.ListUtils;
 import com.bench.lang.base.object.utils.ObjectUtils;
 import com.bench.lang.base.string.utils.StringUtils;
+import com.yuan.common.enums.error.CommonErrorCodeEnum;
+import com.yuan.common.exception.BenchRuntimeException;
 
 /**
  * 枚举工具类
@@ -121,7 +121,7 @@ public class EnumBaseUtils {
 					enumClassMap.put(enumClassName, clasz);
 					return clasz;
 				} catch (ClassNotFoundException e) {
-					throw new BenchRuntimeException("无法找到类异常，类名：" + enumClassName);
+					throw new BenchRuntimeException(CommonErrorCodeEnum.SYSTEM_ERROR,"无法找到类异常，类名：" + enumClassName);
 				}
 			} else {
 				for (Class<?> implementsClass : getAllImplementsEnumBaseEnum()) {
@@ -130,7 +130,7 @@ public class EnumBaseUtils {
 					}
 				}
 			}
-			throw new BenchRuntimeException("无法找到类异常，类名：" + enumClassName);
+			throw new BenchRuntimeException(CommonErrorCodeEnum.SYSTEM_ERROR,"无法找到类异常，类名：" + enumClassName);
 
 		}
 		return clasz;
@@ -337,7 +337,6 @@ public class EnumBaseUtils {
 	 * valueOf多个name返回集合
 	 * 
 	 * @param enumClass
-	 * @param names
 	 * @return
 	 */
 	public static <T extends Enum<T>> T valueOf(Class<T> enumClass, String name) {
@@ -348,7 +347,6 @@ public class EnumBaseUtils {
 	 * valueOf多个name返回集合
 	 * 
 	 * @param enumClass
-	 * @param names
 	 * @return
 	 */
 	public static <T extends Enum<T>> T valueOfIgnoreCase(Class<T> enumClass, String name) {

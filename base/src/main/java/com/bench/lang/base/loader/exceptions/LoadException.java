@@ -4,10 +4,11 @@
  */
 package com.bench.lang.base.loader.exceptions;
 
-import com.bench.lang.base.error.ErrorCode;
-import com.bench.lang.base.error.enums.ErrorEnum;
-import com.bench.lang.base.exception.BenchException;
-import com.bench.lang.base.exception.BenchRuntimeException;
+import com.yuan.common.enums.error.CommonErrorCodeEnum;
+import com.yuan.common.enums.error.ErrorEnum;
+import com.yuan.common.error.ErrorCode;
+import com.yuan.common.exception.BenchException;
+import com.yuan.common.exception.BenchRuntimeException;
 
 /**
  * 加载异常
@@ -35,7 +36,7 @@ public class LoadException extends BenchException {
 	 * @param throwable
 	 */
 	public LoadException(String message, Throwable throwable) {
-		super(message, throwable);
+		super(CommonErrorCodeEnum.ERROR_UNKNOWN,message, throwable);
 		// TODO Auto-generated constructor stub
 	}
 
@@ -44,7 +45,7 @@ public class LoadException extends BenchException {
 	 * @param message
 	 */
 	public <E extends BenchException> LoadException(String message) {
-		super(message);
+		super(CommonErrorCodeEnum.ERROR_UNKNOWN,message);
 		// TODO Auto-generated constructor stub
 	}
 

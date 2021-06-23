@@ -9,12 +9,13 @@ import java.lang.annotation.Annotation;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.yuan.common.enums.error.CommonErrorCodeEnum;
+import com.yuan.common.exception.BenchRuntimeException;
 import org.springframework.core.type.classreading.MetadataReader;
 import org.springframework.core.type.filter.AnnotationTypeFilter;
 
 import com.bench.lang.base.clasz.scanner.ClassScanner;
 import com.bench.lang.base.clasz.scanner.InterfaceTypeFilter;
-import com.bench.lang.base.exception.BenchRuntimeException;
 import com.bench.lang.base.list.utils.ListUtils;
 import com.bench.lang.base.pattern.utils.PatternMatchUtils;
 import com.bench.lang.base.string.build.ToStringObject;
@@ -113,7 +114,7 @@ public abstract class AbstractMetadataReaderAcceptor extends ToStringObject impl
 						return false;
 					}
 				} catch (IOException e) {
-					throw new BenchRuntimeException("判断当前类是否实现接口时异常,MetadataReader=" + t + ",filter" + filter + ",interfaceClass=" + filter.getTargetType(), e);
+					throw new BenchRuntimeException(CommonErrorCodeEnum.SYSTEM_ERROR,"判断当前类是否实现接口时异常,MetadataReader=" + t + ",filter" + filter + ",interfaceClass=" + filter.getTargetType(), e);
 				}
 			}
 		}
@@ -147,7 +148,7 @@ public abstract class AbstractMetadataReaderAcceptor extends ToStringObject impl
 						return false;
 					}
 				} catch (IOException e) {
-					throw new BenchRuntimeException("判断当前类是否包含注解时异常,MetadataReader=" + t + ",filter" + filter + ",annotationClass=" + filter.getAnnotationType(), e);
+					throw new BenchRuntimeException(CommonErrorCodeEnum.SYSTEM_ERROR,"判断当前类是否包含注解时异常,MetadataReader=" + t + ",filter" + filter + ",annotationClass=" + filter.getAnnotationType(), e);
 				}
 			}
 		}

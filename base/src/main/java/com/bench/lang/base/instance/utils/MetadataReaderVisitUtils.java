@@ -2,10 +2,11 @@ package com.bench.lang.base.instance.utils;
 
 import java.io.IOException;
 
+import com.yuan.common.enums.error.CommonErrorCodeEnum;
+import com.yuan.common.exception.BenchRuntimeException;
 import org.springframework.core.type.classreading.MetadataReader;
 
 import com.bench.lang.base.clasz.scanner.ClassScanner;
-import com.bench.lang.base.exception.BenchRuntimeException;
 import com.bench.lang.base.instance.visitor.MetadataReaderVisitor;
 
 public class MetadataReaderVisitUtils {
@@ -39,7 +40,7 @@ public class MetadataReaderVisitUtils {
 					return false;
 				}
 			} catch (IOException e) {
-				throw new BenchRuntimeException("访问父类metadata异常,superClassName=" + superClassName, e);
+				throw new BenchRuntimeException(CommonErrorCodeEnum.SYSTEM_ERROR,"访问父类metadata异常,superClassName=" + superClassName, e);
 			}
 		}
 
@@ -51,7 +52,7 @@ public class MetadataReaderVisitUtils {
 					return false;
 				}
 			} catch (IOException e) {
-				throw new BenchRuntimeException("访问接口metadata异常,interfaceClassName=" + ifc, e);
+				throw new BenchRuntimeException(CommonErrorCodeEnum.SYSTEM_ERROR,"访问接口metadata异常,interfaceClassName=" + ifc, e);
 			}
 		}
 		return true;

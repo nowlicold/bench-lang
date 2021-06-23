@@ -12,12 +12,12 @@ import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
+import com.yuan.common.enums.error.CommonErrorCodeEnum;
+import com.yuan.common.exception.BenchRuntimeException;
 import org.apache.commons.collections.CollectionUtils;
 
 import com.bench.lang.base.clasz.field.ClassNullField;
 import com.bench.lang.base.clasz.utils.ClassUtils;
-import com.bench.lang.base.error.enums.CommonErrorCodeEnum;
-import com.bench.lang.base.exception.BenchRuntimeException;
 import com.bench.lang.base.string.utils.StringUtils;
 
 /**
@@ -35,7 +35,7 @@ public class FieldUtils {
 		try {
 			NULL_FIELD = ClassNullField.class.getDeclaredField("NULL_FIELD");
 		} catch (Exception e) {
-			throw new BenchRuntimeException(CommonErrorCodeEnum.SYSTEM_ERROR, "初始化ClassUtils异常", e);
+			throw new BenchRuntimeException(CommonErrorCodeEnum.SYSTEM_ERROR.errorCode(), "初始化ClassUtils异常", e);
 		}
 	}
 
@@ -211,7 +211,7 @@ public class FieldUtils {
 	 * 递归获取Field，如果在当前类中无法找到，则到父类中查找
 	 * 
 	 * @param clasz
-	 * @param fieldName
+	 * @param fieldType
 	 * @return
 	 * @throws NoSuchFieldException
 	 */
@@ -238,13 +238,14 @@ public class FieldUtils {
 		try {
 			field = getField(obj.getClass(), fieldName);
 		} catch (NoSuchFieldException e) {
-			throw new BenchRuntimeException("无法找到属性,object=" + obj + ",fieldName=" + fieldName, e);
+
+			throw new BenchRuntimeException(CommonErrorCodeEnum.SYSTEM_ERROR,"无法找到属性,object=" + obj + ",fieldName=" + fieldName, e);
 		}
 		try {
 			field.setAccessible(true);
 			field.set(obj, fieldValue);
 		} catch (Exception e) {
-			throw new BenchRuntimeException("设置属性值异常,object=" + obj + ",fieldName=" + fieldName, e);
+			throw new BenchRuntimeException(CommonErrorCodeEnum.SYSTEM_ERROR,"设置属性值异常,object=" + obj + ",fieldName=" + fieldName, e);
 		}
 	}
 
@@ -269,13 +270,13 @@ public class FieldUtils {
 		try {
 			field = getField(objClass, fieldName);
 		} catch (NoSuchFieldException e) {
-			throw new BenchRuntimeException("无法找到属性,objClass=" + objClass + ",fieldName=" + fieldName, e);
+			throw new BenchRuntimeException(CommonErrorCodeEnum.SYSTEM_ERROR,"无法找到属性,objClass=" + objClass + ",fieldName=" + fieldName, e);
 		}
 		try {
 			field.setAccessible(true);
 			field.set(null, fieldValue);
 		} catch (Exception e) {
-			throw new BenchRuntimeException("设置属性值异常,objClass=" + objClass + ",fieldName=" + fieldName, e);
+			throw new BenchRuntimeException(CommonErrorCodeEnum.SYSTEM_ERROR,"设置属性值异常,objClass=" + objClass + ",fieldName=" + fieldName, e);
 		}
 	}
 
@@ -291,7 +292,7 @@ public class FieldUtils {
 			field.setAccessible(true);
 			return field.get(obj);
 		} catch (Exception e) {
-			throw new BenchRuntimeException("获取属性值异常,field=" + field + ",obj=" + obj, e);
+			throw new BenchRuntimeException(CommonErrorCodeEnum.SYSTEM_ERROR,"获取属性值异常,field=" + field + ",obj=" + obj, e);
 		}
 	}
 
@@ -312,7 +313,7 @@ public class FieldUtils {
 				field.setAccessible(true);
 				return field.get(object);
 			} catch (Exception e) {
-				throw new BenchRuntimeException("获取属性值异常,fieldName=" + fieldName + ",object=" + object, e);
+				throw new BenchRuntimeException(CommonErrorCodeEnum.SYSTEM_ERROR,"获取属性值异常,fieldName=" + fieldName + ",object=" + object, e);
 			}
 		}
 		return null;

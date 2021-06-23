@@ -15,12 +15,13 @@ import java.util.Objects;
 import java.util.Set;
 import java.util.TreeMap;
 
+import com.yuan.common.enums.error.CommonErrorCodeEnum;
+import com.yuan.common.exception.BenchRuntimeException;
 import org.apache.commons.collections4.map.LRUMap;
 
 import com.bench.lang.base.array.utils.ArrayUtils;
 import com.bench.lang.base.bean.utils.PropertyUtils;
 import com.bench.lang.base.collection.utils.CollectionUtils;
-import com.bench.lang.base.exception.BenchRuntimeException;
 import com.bench.lang.base.object.utils.ObjectUtils;
 import com.bench.lang.base.properties.utils.PropertiesUtils;
 import com.bench.lang.base.string.utils.StringUtils;
@@ -147,7 +148,7 @@ public class MapUtils extends org.apache.commons.collections.MapUtils {
 			try {
 				returnMap.put(PropertyUtils.getProperty(object, keyFieldName), object);
 			} catch (Exception e) {
-				throw new BenchRuntimeException("将对象集合转换为Map异常,keyFieldName=" + keyFieldName, e);
+				throw new BenchRuntimeException(CommonErrorCodeEnum.SYSTEM_ERROR,"将对象集合转换为Map异常,keyFieldName=" + keyFieldName, e);
 			}
 		}
 		return returnMap;

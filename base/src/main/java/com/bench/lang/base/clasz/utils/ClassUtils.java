@@ -20,6 +20,8 @@ import java.util.Set;
 import java.util.Vector;
 import java.util.concurrent.ConcurrentHashMap;
 
+import com.yuan.common.enums.error.CommonErrorCodeEnum;
+import com.yuan.common.exception.BenchRuntimeException;
 import org.springframework.core.DefaultParameterNameDiscoverer;
 import org.springframework.core.ParameterNameDiscoverer;
 import org.springframework.core.type.classreading.MetadataReader;
@@ -33,8 +35,6 @@ import com.bench.lang.base.clasz.scanner.ClassScanner;
 import com.bench.lang.base.clasz.visit.ClassVisitor;
 import com.bench.lang.base.clasz.visit.SimpleClassVisitor;
 import com.bench.lang.base.collection.utils.CollectionUtils;
-import com.bench.lang.base.error.enums.CommonErrorCodeEnum;
-import com.bench.lang.base.exception.BenchRuntimeException;
 import com.bench.lang.base.string.utils.StringUtils;
 import com.bench.lang.base.utils.PathMatchUtils;
 
@@ -79,14 +79,14 @@ public class ClassUtils extends org.apache.commons.lang3.ClassUtils {
 	public static <T> T newInstance(Class<T> clazz, Class<?>[] parameterClasses, Object[] parameterValues) {
 		Assert.notNull(clazz, "Class must not be null");
 		if (clazz.isInterface()) {
-			throw new BenchRuntimeException("实例化类异常,class是接口，class=" + clazz);
+			throw new BenchRuntimeException(CommonErrorCodeEnum.SYSTEM_ERROR,"实例化类异常,class是接口，class=" + clazz);
 		}
 		try {
 			Constructor<T> c = parameterClasses == null ? clazz.getDeclaredConstructor() : clazz.getDeclaredConstructor(parameterClasses);
 			c.setAccessible(true);
 			return c == null ? null : (parameterClasses == null ? c.newInstance() : c.newInstance(parameterValues));
 		} catch (Exception ex) {
-			throw new BenchRuntimeException(
+			throw new BenchRuntimeException(CommonErrorCodeEnum.SYSTEM_ERROR,
 					"构造实例异常,class=" + clazz + ",parameterClasses=" + ArrayUtils.toString(parameterClasses) + ",parameterValues=" + ArrayUtils.toString(parameterValues),
 					ex);
 		}
@@ -95,7 +95,7 @@ public class ClassUtils extends org.apache.commons.lang3.ClassUtils {
 	public static <T> Constructor<T> getConstructor(Class<T> clazz, Class<?>... paramTypes) {
 		Assert.notNull(clazz, "Class must not be null");
 		if (clazz.isInterface()) {
-			throw new BenchRuntimeException("实例化类异常,class是接口，class=" + clazz);
+			throw new BenchRuntimeException(CommonErrorCodeEnum.SYSTEM_ERROR,"实例化类异常,class是接口，class=" + clazz);
 		}
 		try {
 			return clazz.getDeclaredConstructor(paramTypes);
@@ -1046,7 +1046,7 @@ public class ClassUtils extends org.apache.commons.lang3.ClassUtils {
 	/**
 	 * 得到属性的ComponentType
 	 * 
-	 * @param clasz
+	 * @param type
 	 * @return
 	 */
 	public static Class<?> getComponentType(Type type) {
@@ -1069,7 +1069,7 @@ public class ClassUtils extends org.apache.commons.lang3.ClassUtils {
 	/**
 	 * 得到属性的ComponentType
 	 * 
-	 * @param clasz
+	 * @param field
 	 * @return
 	 */
 	public static Class<?> getComponentType(Field field) {
@@ -1079,7 +1079,7 @@ public class ClassUtils extends org.apache.commons.lang3.ClassUtils {
 	/**
 	 * 得到map类型的kv泛型
 	 * 
-	 * @param clasz
+	 * @param field
 	 * @return
 	 */
 	public static Type[] getMapKVComponentType(Field field) {
@@ -1418,8 +1418,8 @@ public class ClassUtils extends org.apache.commons.lang3.ClassUtils {
 	/**
 	 * 接口和实现类是否是一套,即符合DefaultXXX或者XXXImpl
 	 * 
-	 * @param implementClass
-	 * @param implementsInterface
+	 * @param interfaze
+	 * @param clasz
 	 * @return
 	 */
 	public static boolean isImplementSuit(Class<?> clasz, Class<?> interfaze) {
@@ -1448,7 +1448,7 @@ public class ClassUtils extends org.apache.commons.lang3.ClassUtils {
 	/**
 	 * 获取当前类继承的接口的注解
 	 * 
-	 * @param field
+	 * @param annotationClass
 	 * @return
 	 */
 	public static <T extends Annotation> T getInterfaceAnnotation(Class<?> clasz, Class<T> annotationClass) {
@@ -1464,7 +1464,6 @@ public class ClassUtils extends org.apache.commons.lang3.ClassUtils {
 	/**
 	 * 获取当前类的注解(查找父类和接口)
 	 * 
-	 * @param field
 	 * @return
 	 */
 	public static <T extends Annotation> T getAnnotation(Class<?> clasz, Class<T> annotationClass) {
@@ -1493,7 +1492,6 @@ public class ClassUtils extends org.apache.commons.lang3.ClassUtils {
 	/**
 	 * 获取当前类继承的接口的注解
 	 * 
-	 * @param field
 	 * @return
 	 */
 	public static Class<?> getInterfaceContainsAnnotation(Class<?> clasz, Class<? extends Annotation> annotationClass) {
@@ -1668,7 +1666,6 @@ public class ClassUtils extends org.apache.commons.lang3.ClassUtils {
 	 * 获取泛型class
 	 * 
 	 * @param clasz
-	 * @param annotaionClass
 	 * @return
 	 */
 	public static Set<Class<?>> getParameterizedClass(Class<?> clasz, String[] matchPackages) {

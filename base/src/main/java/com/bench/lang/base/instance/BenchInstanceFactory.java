@@ -7,12 +7,13 @@ package com.bench.lang.base.instance;
 import java.lang.annotation.Annotation;
 import java.util.List;
 
+import com.yuan.common.enums.error.CommonErrorCodeEnum;
+import com.yuan.common.exception.BenchRuntimeException;
 import org.springframework.core.annotation.MergedAnnotation;
 import org.springframework.core.type.classreading.MetadataReader;
 
 import com.bench.lang.base.array.utils.ArrayUtils;
 import com.bench.lang.base.clasz.utils.ClassUtils;
-import com.bench.lang.base.exception.BenchRuntimeException;
 import com.bench.lang.base.instance.acceptor.MetadataReaderAcceptor;
 import com.bench.lang.base.instance.utils.MetadataReaderUtils;
 import com.bench.lang.base.name.annotations.Name;
@@ -120,7 +121,7 @@ public class BenchInstanceFactory {
 			Class<? extends Annotation> annotationClass, Object annotationValue, boolean nullable) {
 		T instance = BenchClassInstanceFactory.getFirstImplementsClassInstance(interfaceClass, parameterClasses, parameterValues, annotationClass, annotationValue);
 		if (!nullable && instance == null) {
-			throw new BenchRuntimeException("获取默认的" + interfaceClass + "异常，不存在" + interfaceClass + "的实现类,parameterClasses=" + ArrayUtils.toString(parameterClasses)
+			throw new BenchRuntimeException(CommonErrorCodeEnum.SYSTEM_ERROR,"获取默认的" + interfaceClass + "异常，不存在" + interfaceClass + "的实现类,parameterClasses=" + ArrayUtils.toString(parameterClasses)
 					+ ",annotationClass=" + annotationClass + ",annotationValue=" + annotationValue);
 		}
 		return instance;
@@ -133,7 +134,7 @@ public class BenchInstanceFactory {
 	public static <T> T getDefaultNullableWithAcceptor(Class<?>[] parameterClasses, Object[] parameterValues, MetadataReaderAcceptor acceptor, boolean nullable) {
 		T instance = BenchClassInstanceFactory.getFirstImplementsClassInstance(parameterClasses, parameterValues, acceptor);
 		if (!nullable && instance == null) {
-			throw new BenchRuntimeException("获取默认的实现类异常，acceptor=" + acceptor + ",parameterClasses=" + ArrayUtils.toString(parameterClasses));
+			throw new BenchRuntimeException(CommonErrorCodeEnum.SYSTEM_ERROR,"获取默认的实现类异常，acceptor=" + acceptor + ",parameterClasses=" + ArrayUtils.toString(parameterClasses));
 		}
 		return instance;
 	}
@@ -145,7 +146,7 @@ public class BenchInstanceFactory {
 	public static <T> T getDefaultNullableWithAcceptor(MetadataReaderAcceptor acceptor, boolean nullable) {
 		T instance = BenchClassInstanceFactory.getFirstImplementsClassInstance((Class<?>[]) null, (Object[]) null, acceptor);
 		if (!nullable && instance == null) {
-			throw new BenchRuntimeException("获取默认的实现类异常，acceptor=" + acceptor);
+			throw new BenchRuntimeException(CommonErrorCodeEnum.SYSTEM_ERROR,"获取默认的实现类异常，acceptor=" + acceptor);
 		}
 		return instance;
 	}
@@ -153,7 +154,6 @@ public class BenchInstanceFactory {
 	/**
 	 * 返回了所有实现interfaceClass接口的类实例
 	 * 
-	 * @param parserType
 	 * @return
 	 */
 	public static <T> List<T> getAll(Class<T> interfaceClass) {
@@ -177,7 +177,6 @@ public class BenchInstanceFactory {
 	 * 根据名称返回interfaceClass的实现类实例<br>
 	 * 注意，这些类实例必须包含Named注解
 	 * 
-	 * @param parserType
 	 * @return
 	 */
 	public static <T> T getByName(Class<T> interfaceClass, String instanceName) {
@@ -188,7 +187,6 @@ public class BenchInstanceFactory {
 	 * 根据名称返回interfaceClass的实现类实例<br>
 	 * 注意，这些类实例必须包含Named注解
 	 * 
-	 * @param parserType
 	 * @return
 	 */
 	public static <T> T getByName(Class<T> interfaceClass, Class<?>[] parameterClasses, Object[] parameterValues, String instanceName) {
@@ -199,7 +197,6 @@ public class BenchInstanceFactory {
 	 * 根据名称返回interfaceClass的实现类实例<br>
 	 * 注意，这些类实例必须包含Named注解
 	 * 
-	 * @param parserType
 	 * @return
 	 */
 	@SuppressWarnings("unchecked")
@@ -227,7 +224,7 @@ public class BenchInstanceFactory {
 			return true;
 		}).findFirst().orElse(null);
 		if (matchedMetadataReader == null) {
-			throw new BenchRuntimeException("无法查找接口的实现类，interfaceClass=" + interfaceClass + "，instanceName=" + instanceName + ",withAnnotationClass="
+			throw new BenchRuntimeException(CommonErrorCodeEnum.SYSTEM_ERROR,"无法查找接口的实现类，interfaceClass=" + interfaceClass + "，instanceName=" + instanceName + ",withAnnotationClass="
 					+ withAnnotationClass + ",withAnnotationValue=" + withAnnotationValue);
 		}
 		Class<?> implementsClass = (Class<?>) BenchClassFactory.getClass(matchedMetadataReader.getClassMetadata().getClassName());
