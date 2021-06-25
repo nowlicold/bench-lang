@@ -4,7 +4,7 @@
  */
 package com.bench.lang.base.unit.enums;
 
-import com.bench.lang.base.enums.EnumBase;
+import com.bench.common.enums.EnumBase;
 
 /**
  * 字节单位枚举
@@ -38,5 +38,15 @@ public enum ByteUnitEnum implements EnumBase {
 
 	public long size() {
 		return size;
+	}
+
+	@Override
+	public String message() {
+		return null;
+	}
+
+	@Override
+	public Number value() {
+		return this.size;
 	}
 }

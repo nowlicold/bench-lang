@@ -5,8 +5,8 @@ import java.util.List;
 import com.bench.lang.base.clasz.target.locate.locator.TargetClassLocator;
 import com.bench.lang.base.instance.BenchInstanceFactory;
 import com.bench.lang.base.instance.annotations.Singleton;
-import com.yuan.common.enums.error.CommonErrorCodeEnum;
-import com.yuan.common.exception.BenchRuntimeException;
+import com.bench.common.enums.error.CommonErrorCodeEnum;
+import com.bench.common.exception.BenchRuntimeException;
 
 /**
  * 目标class定位管理器，定位真正的class ，因为class可能被AOP等代理或者封装

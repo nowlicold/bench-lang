@@ -1,6 +1,6 @@
 package com.bench.lang.base.json.enums;
 
-import com.bench.lang.base.enums.EnumBase;
+import com.bench.common.enums.EnumBase;
 
 /**
  * 变量名模式
@@ -21,4 +21,13 @@ public enum ScriptNameModeEnum implements EnumBase {
 		this.message = message;
 	}
 
+	@Override
+	public String message() {
+		return this.message;
+	}
+
+	@Override
+	public Number value() {
+		return null;
+	}
 }

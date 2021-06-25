@@ -1,6 +1,6 @@
 package com.bench.lang.base.system.environment;
 
-import com.bench.lang.base.enums.EnumBase;
+import com.bench.common.enums.EnumBase;
 
 /**
  * 系统环境变量名，所有的环境变量都要继承这个接口<br>

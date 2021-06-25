@@ -5,11 +5,11 @@
 	<parent>
 		<groupId>com.bench</groupId>
 		<artifactId>bench-dependency</artifactId>
-		<version>1.4</version>
+		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 	<groupId>com.bench.lang</groupId>
 	<artifactId>bench-lang-parent</artifactId>
-	<version>1.4</version>
+	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<properties >

@@ -8,8 +8,8 @@ import java.util.concurrent.atomic.AtomicInteger;
 import com.bench.lang.base.math.permutation.PermutationEachVisitor;
 import com.bench.lang.base.math.permutation.PermutationEntry;
 import com.bench.lang.base.math.permutation.PermutationGenerator;
-import com.yuan.common.enums.error.CommonErrorCodeEnum;
-import com.yuan.common.exception.BenchRuntimeException;
+import com.bench.common.enums.error.CommonErrorCodeEnum;
+import com.bench.common.exception.BenchRuntimeException;
 
 /**
  * 排列工具类

@@ -11,8 +11,8 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonSerializer;
 import com.fasterxml.jackson.databind.SerializerProvider;
 import com.fasterxml.jackson.databind.introspect.Annotated;
-import com.yuan.common.enums.error.CommonErrorCodeEnum;
-import com.yuan.common.exception.BenchRuntimeException;
+import com.bench.common.enums.error.CommonErrorCodeEnum;
+import com.bench.common.exception.BenchRuntimeException;
 
 import java.io.IOException;
 

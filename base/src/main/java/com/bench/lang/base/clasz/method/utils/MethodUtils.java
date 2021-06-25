@@ -10,8 +10,8 @@ import java.util.List;
 
 import com.bench.lang.base.clasz.field.utils.FieldUtils;
 import com.bench.lang.base.string.utils.StringUtils;
-import com.yuan.common.enums.error.CommonErrorCodeEnum;
-import com.yuan.common.exception.BenchRuntimeException;
+import com.bench.common.enums.error.CommonErrorCodeEnum;
+import com.bench.common.exception.BenchRuntimeException;
 
 /**
  * @author cold

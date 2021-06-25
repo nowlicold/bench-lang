@@ -4,7 +4,7 @@
  */
 package com.bench.lang.base.money.enums;
 
-import com.bench.lang.base.enums.EnumBase;
+import com.bench.common.enums.EnumBase;
 
 /**
  * 金额类型

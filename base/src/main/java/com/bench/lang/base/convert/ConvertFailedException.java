@@ -1,7 +1,7 @@
 package com.bench.lang.base.convert;
 
-import com.yuan.common.enums.error.CommonErrorCodeEnum;
-import com.yuan.common.exception.BenchRuntimeException;
+import com.bench.common.enums.error.CommonErrorCodeEnum;
+import com.bench.common.exception.BenchRuntimeException;
 
 /**
  * 表示转换失败的异常. 转换失败时, 可以指定一个建议的默认值.

@@ -2,8 +2,8 @@ package com.bench.lang.base.instance.utils;
 
 import java.io.IOException;
 
-import com.yuan.common.enums.error.CommonErrorCodeEnum;
-import com.yuan.common.exception.BenchRuntimeException;
+import com.bench.common.enums.error.CommonErrorCodeEnum;
+import com.bench.common.exception.BenchRuntimeException;
 import org.springframework.core.type.classreading.MetadataReader;
 
 import com.bench.lang.base.clasz.scanner.ClassScanner;

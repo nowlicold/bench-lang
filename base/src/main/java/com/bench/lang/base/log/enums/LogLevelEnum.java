@@ -1,6 +1,6 @@
 package com.bench.lang.base.log.enums;
 
-import com.bench.lang.base.enums.EnumBase;
+import com.bench.common.enums.EnumBase;
 
 /**
  * 日志等级
@@ -40,6 +40,11 @@ public enum LogLevelEnum implements EnumBase {
 				return level;
 			}
 		}
+		return null;
+	}
+
+	@Override
+	public String message() {
 		return null;
 	}
 

@@ -1,7 +1,7 @@
 package com.bench.lang.base.json.enums;
 
 
-import com.bench.lang.base.enums.EnumBase;
+import com.bench.common.enums.EnumBase;
 
 /**
  * json数据类型
@@ -30,4 +30,13 @@ public enum JsonDataTypeEnum implements EnumBase {
 		this.message = message;
 	}
 
+	@Override
+	public String message() {
+		return this.message;
+	}
+
+	@Override
+	public Number value() {
+		return null;
+	}
 }

@@ -25,4 +25,13 @@ public enum CommonSystemEnvNameEnum implements SystemEnvName {
 		this.message = message;
 	}
 
+	@Override
+	public String message() {
+		return this.message;
+	}
+
+	@Override
+	public Number value() {
+		return null;
+	}
 }

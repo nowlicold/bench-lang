@@ -2,8 +2,8 @@ package com.bench.lang.base.base64.utils;
 
 import java.io.UnsupportedEncodingException;
 
-import com.yuan.common.enums.error.CommonErrorCodeEnum;
-import com.yuan.common.exception.BenchRuntimeException;
+import com.bench.common.enums.error.CommonErrorCodeEnum;
+import com.bench.common.exception.BenchRuntimeException;
 import org.apache.commons.codec.binary.Base64;
 
 import com.bench.lang.base.string.utils.StringUtils;

@@ -8,8 +8,8 @@ import java.util.concurrent.atomic.AtomicInteger;
 import com.bench.lang.base.collection.utils.CollectionUtils;
 import com.bench.lang.base.list.utils.ListUtils;
 import com.bench.lang.base.math.utils.MathUtils;
-import com.yuan.common.enums.error.CommonErrorCodeEnum;
-import com.yuan.common.exception.BenchRuntimeException;
+import com.bench.common.enums.error.CommonErrorCodeEnum;
+import com.bench.common.exception.BenchRuntimeException;
 
 /**
  * 组合工具类

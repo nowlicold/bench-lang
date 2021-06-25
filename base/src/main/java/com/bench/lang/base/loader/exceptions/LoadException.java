@@ -4,11 +4,11 @@
  */
 package com.bench.lang.base.loader.exceptions;
 
-import com.yuan.common.enums.error.CommonErrorCodeEnum;
-import com.yuan.common.enums.error.ErrorEnum;
-import com.yuan.common.error.ErrorCode;
-import com.yuan.common.exception.BenchException;
-import com.yuan.common.exception.BenchRuntimeException;
+import com.bench.common.enums.error.CommonErrorCodeEnum;
+import com.bench.common.enums.error.ErrorEnum;
+import com.bench.common.error.ErrorCode;
+import com.bench.common.exception.BenchException;
+import com.bench.common.exception.BenchRuntimeException;
 
 /**
  * 加载异常

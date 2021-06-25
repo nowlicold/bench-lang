@@ -5,10 +5,10 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.Currency;
 
-import com.bench.lang.base.enums.EnumBase;
 import com.bench.lang.base.math.utils.MathUtils;
 import com.bench.lang.base.number.utils.NumberUtils;
 import com.bench.lang.base.string.utils.StringUtils;
+import com.bench.common.enums.EnumBase;
 
 /**
  * 单币种货币类，处理货币算术、币种和取整。

@@ -1,6 +1,6 @@
 package com.bench.lang.base.diagnostic;
 
-import com.bench.lang.base.enums.EnumBase;
+import com.bench.common.enums.EnumBase;
 
 /**
  * 信息级别

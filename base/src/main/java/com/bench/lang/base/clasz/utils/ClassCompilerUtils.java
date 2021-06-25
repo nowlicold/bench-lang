@@ -1,7 +1,7 @@
 package com.bench.lang.base.clasz.utils;
 
-import com.yuan.common.enums.error.CommonErrorCodeEnum;
-import com.yuan.common.exception.BenchRuntimeException;
+import com.bench.common.enums.error.CommonErrorCodeEnum;
+import com.bench.common.exception.BenchRuntimeException;
 
 import java.io.File;
 import java.net.URI;

@@ -8,8 +8,8 @@ import java.net.URLDecoder;
 import java.net.URLEncoder;
 
 import com.bench.lang.base.string.utils.StringUtils;
-import com.yuan.common.enums.error.CommonErrorCodeEnum;
-import com.yuan.common.exception.BenchRuntimeException;
+import com.bench.common.enums.error.CommonErrorCodeEnum;
+import com.bench.common.exception.BenchRuntimeException;
 
 /**
  * url工具类

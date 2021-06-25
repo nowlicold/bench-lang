@@ -4,9 +4,9 @@
  */
 package com.bench.lang.base.enums.comparator;
 
-import java.util.Comparator;
+import com.bench.common.enums.EnumBase;
 
-import com.bench.lang.base.enums.EnumBase;
+import java.util.Comparator;
 
 /**
  * EnumBase基于value的比较器

@@ -4,10 +4,10 @@
  */
 package com.bench.lang.base.system.exceptions;
 
-import com.yuan.common.enums.error.ErrorEnum;
-import com.yuan.common.error.ErrorCode;
-import com.yuan.common.exception.BenchException;
-import com.yuan.common.exception.BenchRuntimeException;
+import com.bench.common.enums.error.ErrorEnum;
+import com.bench.common.error.ErrorCode;
+import com.bench.common.exception.BenchException;
+import com.bench.common.exception.BenchRuntimeException;
 
 /**
  * 系统命令错误

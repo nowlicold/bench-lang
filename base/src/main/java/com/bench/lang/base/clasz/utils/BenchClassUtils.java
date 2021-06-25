@@ -7,9 +7,9 @@ import java.util.List;
 
 import com.bench.lang.base.accept.Acceptor;
 import com.bench.lang.base.string.utils.StringUtils;
-import com.yuan.common.enums.error.CommonErrorCodeEnum;
-import com.yuan.common.enums.error.ErrorEnum;
-import com.yuan.common.exception.BenchRuntimeException;
+import com.bench.common.enums.error.CommonErrorCodeEnum;
+import com.bench.common.enums.error.ErrorEnum;
+import com.bench.common.exception.BenchRuntimeException;
 
 /**
  * Bench的Class工具类，快捷访问com.bench开头的所有类

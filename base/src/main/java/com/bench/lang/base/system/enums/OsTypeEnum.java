@@ -1,6 +1,6 @@
 package com.bench.lang.base.system.enums;
 
-import com.bench.lang.base.enums.EnumBase;
+import com.bench.common.enums.EnumBase;
 
 /**
  * 
@@ -32,4 +32,13 @@ public enum OsTypeEnum implements EnumBase {
 
 	UNKNOWN,;
 
+	@Override
+	public String message() {
+		return null;
+	}
+
+	@Override
+	public Number value() {
+		return null;
+	}
 }

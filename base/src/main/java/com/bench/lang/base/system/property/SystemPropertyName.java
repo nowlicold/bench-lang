@@ -1,6 +1,6 @@
 package com.bench.lang.base.system.property;
 
-import com.bench.lang.base.enums.EnumBase;
+import com.bench.common.enums.EnumBase;
 
 /**
  * 系统属性变量名，所有的系统属性都要继承这个接口<br>

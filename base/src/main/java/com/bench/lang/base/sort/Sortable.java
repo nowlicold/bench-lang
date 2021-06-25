@@ -4,7 +4,7 @@
  */
 package com.bench.lang.base.sort;
 
-import com.bench.lang.base.enums.EnumBase;
+import com.bench.common.enums.EnumBase;
 
 /**
  * 可排序的枚举

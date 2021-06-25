@@ -4,6 +4,8 @@
  */
 package com.bench.lang.base.enums;
 
+import com.bench.common.enums.EnumBase;
+
 /**
  * 
  * @author cold
@@ -19,4 +21,15 @@ public enum BenchStartupTypeEnum implements EnumBase {
 	PROJECT_GEN,
 
 	DAL_GEN,
+	;
+
+	@Override
+	public String message() {
+		return null;
+	}
+
+	@Override
+	public Number value() {
+		return null;
+	}
 }
