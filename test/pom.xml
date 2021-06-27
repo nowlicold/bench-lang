@@ -21,7 +21,6 @@
 		<dependency>
 			<groupId>com.bench.lang</groupId>
 			<artifactId>bench-lang-base</artifactId>
-			<version>${bench.version}</version>
 			<scope>test</scope>
 		</dependency>
 

@@ -73,7 +73,7 @@ public class IOUtils extends org.apache.commons.io.IOUtils {
      * @throws IOException
      */
     public static void writeFile(String content, Charset charset, File file) throws IOException {
-        try (FileWriter fr = new FileWriter(file, charset)) {
+        try (FileWriter fr = new FileWriter(file)) {
             fr.append(content);
         }
     }
@@ -116,7 +116,7 @@ public class IOUtils extends org.apache.commons.io.IOUtils {
         if (!file.getParentFile().exists()) {
             new File(file.getParent()).mkdirs();
         }
-        try (FileWriter fw = new FileWriter(file, Charset.forName(StringUtils.defaultIfEmpty(charset, Constants.DEFAULT_CHARSET)));) {
+        try (FileWriter fw = new FileWriter(file)) {
             IOUtils.write(content, fw);
             IOUtils.flush(fw);
         }
