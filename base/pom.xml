@@ -18,6 +18,13 @@
 					<target>8</target>
 				</configuration>
 			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-deploy-plugin</artifactId>
+				<configuration>
+					<skip>false</skip>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
 	<parent>
@@ -114,5 +121,4 @@
 			<artifactId>common-model</artifactId>
 		</dependency>
 	</dependencies>
-
 </project>
