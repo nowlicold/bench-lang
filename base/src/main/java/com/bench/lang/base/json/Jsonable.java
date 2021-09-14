@@ -9,9 +9,9 @@ import com.fasterxml.jackson.databind.JsonNode;
 /**
  * 可json化的对象
  * 
- * @author chenbug
+ * @author cold
  *
- * @version $Id: Jsonable.java, v 0.1 2016年6月2日 上午10:35:58 chenbug Exp $
+ * @version $Id: Jsonable.java, v 0.1 2016年6月2日 上午10:35:58 cold Exp $
  */
 public interface Jsonable {
 

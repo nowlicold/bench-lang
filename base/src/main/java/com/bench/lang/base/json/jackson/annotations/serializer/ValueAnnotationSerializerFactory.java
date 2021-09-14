@@ -18,9 +18,9 @@ import java.util.Map;
 
 /**
  * 
- * @author chenbug
+ * @author cold
  *
- * @version $Id: ValueAnnotationSerializerFactory.java, v 0.1 2016年3月2日 下午2:30:02 chenbug Exp $
+ * @version $Id: ValueAnnotationSerializerFactory.java, v 0.1 2016年3月2日 下午2:30:02 cold Exp $
  */
 public class ValueAnnotationSerializerFactory {
 

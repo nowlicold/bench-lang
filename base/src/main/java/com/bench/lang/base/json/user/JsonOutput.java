@@ -8,9 +8,9 @@ import java.lang.annotation.Target;
 /**
  * 以JSON格式输出
  * 
- * @author chenbug
+ * @author cold
  * 
- * @version $Id: JsonFormat.java, v 0.1 2012-11-20 下午3:16:45 chenbug Exp $
+ * @version $Id: JsonFormat.java, v 0.1 2012-11-20 下午3:16:45 cold Exp $
  */
 @Target({ ElementType.METHOD })
 @Retention(RetentionPolicy.RUNTIME)

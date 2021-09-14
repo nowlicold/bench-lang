@@ -17,9 +17,9 @@ import java.lang.reflect.Field;
 
 /**
  * 
- * @author chenbug
+ * @author cold
  *
- * @version $Id: MoneyJacksonSerializer.java, v 0.1 2016年2月29日 下午5:33:42 chenbug Exp $
+ * @version $Id: MoneyJacksonSerializer.java, v 0.1 2016年2月29日 下午5:33:42 cold Exp $
  */
 public class MoneyJacksonSerializer extends JsonSerializer<Money> {
 

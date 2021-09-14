@@ -16,10 +16,10 @@ import java.lang.reflect.Field;
 /**
  * 表达式匹配处理
  * 
- * @author chenbug
+ * @author cold
  *
  * @version $Id: MatchExpressionValueAnnotationHandler.java, v 0.1 2016年3月2日
- *          下午2:29:37 chenbug Exp $
+ *          下午2:29:37 cold Exp $
  */
 public class MatchExpressionValueAnnotationHandler implements ValueAnnotationSerializer<MatchExpression> {
 

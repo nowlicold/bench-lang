@@ -22,9 +22,9 @@ import java.math.BigDecimal;
 
 /**
  * 
- * @author chenbug
+ * @author cold
  * 
- * @version $Id: EnumBaseJsonValueProcessor.java, v 0.1 2010-8-25 下午10:20:05 chenbug Exp $
+ * @version $Id: EnumBaseJsonValueProcessor.java, v 0.1 2010-8-25 下午10:20:05 cold Exp $
  */
 public class EnumBaseJacksonSerializer extends JsonSerializer<EnumBase> {
 

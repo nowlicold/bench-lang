@@ -16,10 +16,10 @@ import java.util.List;
 /**
  * 多Value注解处理
  * 
- * @author chenbug
+ * @author cold
  *
  * @version $Id: MultiValueAnnotationHandleJsonSerializer.java, v 0.1 2016年3月2日
- *          下午2:46:53 chenbug Exp $
+ *          下午2:46:53 cold Exp $
  */
 public class MultiValueAnnotationJsonSerializer extends JsonSerializer<Object> {
 

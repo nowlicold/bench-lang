@@ -6,9 +6,9 @@ import com.bench.common.enums.EnumBase;
 /**
  * json数据类型
  * 
- * @author chenbug
+ * @author cold
  *
- * @version $Id: JsonDataTypeEnum.java, v 0.1 2019年7月12日 上午11:08:38 chenbug Exp $
+ * @version $Id: JsonDataTypeEnum.java, v 0.1 2019年7月12日 上午11:08:38 cold Exp $
  */
 public enum JsonDataTypeEnum implements EnumBase {
 

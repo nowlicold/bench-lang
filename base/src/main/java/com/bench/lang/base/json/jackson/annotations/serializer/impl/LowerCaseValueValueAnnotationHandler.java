@@ -14,9 +14,9 @@ import java.util.List;
 /**
  * 字符串串值小写处理
  * 
- * @author chenbug
+ * @author cold
  *
- * @version $Id: LowerCaseValueValueAnnotationHandler.java, v 0.1 2016年3月2日 下午2:29:37 chenbug Exp $
+ * @version $Id: LowerCaseValueValueAnnotationHandler.java, v 0.1 2016年3月2日 下午2:29:37 cold Exp $
  */
 public class LowerCaseValueValueAnnotationHandler implements ValueAnnotationSerializer<LowerCaseValue> {
 

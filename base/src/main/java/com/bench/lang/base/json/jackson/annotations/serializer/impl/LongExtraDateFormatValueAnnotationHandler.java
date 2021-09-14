@@ -12,10 +12,10 @@ import java.util.Date;
 /**
  * 日期转换成yyyyMMddHHmmssSSS
  * 
- * @author chenbug
+ * @author cold
  *
  * @version $Id: LongExtraDateFormatValueAnnotationHandler.java, v 0.1 2016年3月2日
- *          下午2:29:37 chenbug Exp $
+ *          下午2:29:37 cold Exp $
  */
 public class LongExtraDateFormatValueAnnotationHandler implements ValueAnnotationSerializer<LongExtraDateFormat> {
 

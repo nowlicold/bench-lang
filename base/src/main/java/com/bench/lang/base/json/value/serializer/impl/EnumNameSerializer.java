@@ -15,9 +15,9 @@ import java.util.List;
 /**
  * 只取枚举的name，忽略其他属性
  * 
- * @author chenbug
+ * @author cold
  * 
- * @version $Id: EnumNameConverter.java, v 0.1 2012-6-25 下午12:31:14 chenbug Exp $
+ * @version $Id: EnumNameConverter.java, v 0.1 2012-6-25 下午12:31:14 cold Exp $
  */
 public class EnumNameSerializer implements JSONSerializer {
 

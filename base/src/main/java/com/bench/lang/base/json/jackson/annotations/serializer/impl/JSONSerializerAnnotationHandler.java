@@ -19,9 +19,9 @@ import java.util.concurrent.ConcurrentHashMap;
 /**
  * 基于JSONSerializer的值处理
  * 
- * @author chenbug
+ * @author cold
  *
- * @version $Id: JSONSerializerAnnotationHandler.java, v 0.1 2016年3月2日 下午5:24:35 chenbug Exp $
+ * @version $Id: JSONSerializerAnnotationHandler.java, v 0.1 2016年3月2日 下午5:24:35 cold Exp $
  */
 public class JSONSerializerAnnotationHandler implements ValueAnnotationSerializer<Serializer> {
 

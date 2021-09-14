@@ -17,10 +17,10 @@ import java.util.Map;
 
 /**
  * 
- * @author chenbug
+ * @author cold
  *
  * @version $Id: BenchJacksonSimpleDeserializers.java, v 0.1 2017年12月27日
- *          下午1:56:01 chenbug Exp $
+ *          下午1:56:01 cold Exp $
  */
 public class BenchJacksonSimpleDeserializers extends SimpleDeserializers {
 

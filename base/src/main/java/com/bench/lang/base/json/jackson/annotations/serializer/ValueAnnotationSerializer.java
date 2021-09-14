@@ -10,9 +10,9 @@ import java.lang.annotation.Annotation;
 /**
  * 注解处理器
  * 
- * @author chenbug
+ * @author cold
  *
- * @version $Id: AnnotationHandler.java, v 0.1 2016年3月2日 下午2:25:03 chenbug Exp $
+ * @version $Id: AnnotationHandler.java, v 0.1 2016年3月2日 下午2:25:03 cold Exp $
  */
 public interface ValueAnnotationSerializer<T extends Annotation> extends Ordered {
 

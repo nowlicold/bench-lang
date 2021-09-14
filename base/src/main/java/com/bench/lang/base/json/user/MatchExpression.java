@@ -23,7 +23,7 @@ import java.lang.annotation.Target;
 /**
  * 表达式检查
  * 
- * @author chenbug
+ * @author cold
  */
 @Target({ ElementType.FIELD, ElementType.METHOD })
 @Retention(RetentionPolicy.RUNTIME)

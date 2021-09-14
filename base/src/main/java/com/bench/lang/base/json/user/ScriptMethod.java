@@ -23,7 +23,7 @@ import java.lang.annotation.Target;
 /**
  * 产生脚本的方法
  * 
- * chenbug
+ * cold
  */
 @Target({ ElementType.METHOD })
 @Retention(RetentionPolicy.RUNTIME)

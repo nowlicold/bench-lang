@@ -10,9 +10,9 @@ import com.fasterxml.jackson.databind.deser.ContextualDeserializer;
 /**
  * 
  * 
- * @author chenbug
+ * @author cold
  *
- * @version $Id: AbstractJacksonDeserializer.java, v 0.1 2019年12月25日 下午3:52:31 chenbug Exp $
+ * @version $Id: AbstractJacksonDeserializer.java, v 0.1 2019年12月25日 下午3:52:31 cold Exp $
  */
 public abstract class AbstractJacksonDeserializer<T> extends JsonDeserializer<T> implements ContextualDeserializer {
 

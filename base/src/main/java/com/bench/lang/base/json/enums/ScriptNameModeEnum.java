@@ -5,9 +5,9 @@ import com.bench.common.enums.EnumBase;
 /**
  * 变量名模式
  * 
- * @author chenbug
+ * @author cold
  *
- * @version $Id: ScriptNameModeEnum.java, v 0.1 2019年7月12日 上午11:08:38 chenbug Exp $
+ * @version $Id: ScriptNameModeEnum.java, v 0.1 2019年7月12日 上午11:08:38 cold Exp $
  */
 public enum ScriptNameModeEnum implements EnumBase {
 

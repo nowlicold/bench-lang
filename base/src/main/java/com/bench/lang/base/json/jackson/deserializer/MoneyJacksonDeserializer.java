@@ -15,9 +15,9 @@ import java.io.IOException;
 
 /**
  * 
- * @author chenbug
+ * @author cold
  *
- * @version $Id: MoneyJacksonDeserializer.java, v 0.1 2017年12月27日 下午12:22:21 chenbug Exp $
+ * @version $Id: MoneyJacksonDeserializer.java, v 0.1 2017年12月27日 下午12:22:21 cold Exp $
  */
 public class MoneyJacksonDeserializer extends JsonDeserializer<Money> {
 

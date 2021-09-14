@@ -18,10 +18,10 @@ import java.util.List;
 
 /**
  * 
- * @author chenbug
+ * @author cold
  *
  * @version $Id: BenchJacksonSerializerProvider.java, v 0.1 2016年3月2日 上午10:21:20
- *          chenbug Exp $
+ *          cold Exp $
  */
 public class BenchJacksonSerializerProvider extends DefaultSerializerProvider {
 

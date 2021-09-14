@@ -10,10 +10,10 @@ import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.bench.lang.base.number.utils.NumberUtils;
-import com.bench.lang.base.string.utils.StringUtils;
 import com.bench.common.enums.error.CommonErrorCodeEnum;
 import com.bench.common.exception.BenchRuntimeException;
+import com.bench.lang.base.number.utils.NumberUtils;
+import com.bench.lang.base.string.utils.StringUtils;
 
 /**
  * 数学工具类
@@ -123,7 +123,7 @@ public class MathUtils {
 	 * 将dataList中的数据分割,平均每个part份
 	 * 
 	 * @param dataList
-	 * @param resultCount
+	 * @param part
 	 * @return
 	 */
 	public static <E> List<List<E>> part(List<E> dataList, int part) {
@@ -265,7 +265,7 @@ public class MathUtils {
 	/**
 	 * 小数点保留，数字a保留scale位，fillZeroe为true时，不足位用0补齐
 	 * 
-	 * @param bd
+	 * @param value
 	 * @param scale
 	 * @param fillZero
 	 * @return
@@ -291,7 +291,7 @@ public class MathUtils {
 	/**
 	 * 小数点保留，数字a保留scale位，不足位用0补齐
 	 * 
-	 * @param a
+	 * @param bd
 	 * @param scale
 	 * @return
 	 */

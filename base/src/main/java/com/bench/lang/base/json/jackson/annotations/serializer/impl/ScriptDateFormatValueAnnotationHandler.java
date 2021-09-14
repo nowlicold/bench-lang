@@ -12,10 +12,10 @@ import java.util.Date;
 /**
  * 脚本日期处理
  * 
- * @author chenbug
+ * @author cold
  *
  * @version $Id: ScriptDateFormatValueAnnotationHandler.java, v 0.1 2016年3月2日
- *          下午2:29:37 chenbug Exp $
+ *          下午2:29:37 cold Exp $
  */
 public class ScriptDateFormatValueAnnotationHandler implements ValueAnnotationSerializer<ScriptDateFormat> {
 

@@ -26,9 +26,9 @@ import java.lang.annotation.Target;
 /**
  * 变量名模式
  * 
- * @author chenbug
+ * @author cold
  *
- * @version $Id: ScriptNameMode.java, v 0.1 2019年12月24日 下午12:18:29 chenbug Exp $
+ * @version $Id: ScriptNameMode.java, v 0.1 2019年12月24日 下午12:18:29 cold Exp $
  */
 @Target({ ElementType.FIELD, ElementType.METHOD, ElementType.TYPE })
 @Retention(RetentionPolicy.RUNTIME)

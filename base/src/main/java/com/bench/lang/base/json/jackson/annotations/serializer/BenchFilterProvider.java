@@ -8,9 +8,9 @@ import com.fasterxml.jackson.databind.ser.impl.SimpleFilterProvider;
 
 /**
  * 
- * @author chenbug
+ * @author cold
  *
- * @version $Id: BenchFilterProvider.java, v 0.1 2017年3月1日 下午3:44:15 chenbug Exp $
+ * @version $Id: BenchFilterProvider.java, v 0.1 2017年3月1日 下午3:44:15 cold Exp $
  */
 public class BenchFilterProvider extends SimpleFilterProvider {
 

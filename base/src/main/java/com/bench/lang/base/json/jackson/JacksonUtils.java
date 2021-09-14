@@ -44,9 +44,9 @@ import java.util.*;
  * 1、含有共有的get或者is方法<br>
  * 2、增加ScriptName和ScriptMethod的方法<br>
  * 
- * @author chenbug
+ * @author cold
  *
- * @version $Id: JackSonUtils.java, v 0.1 2016年2月29日 下午5:41:19 chenbug Exp $
+ * @version $Id: JackSonUtils.java, v 0.1 2016年2月29日 下午5:41:19 cold Exp $
  */
 public class JacksonUtils {
 

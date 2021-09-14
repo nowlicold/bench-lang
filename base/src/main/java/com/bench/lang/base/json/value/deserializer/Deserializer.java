@@ -8,9 +8,9 @@ import java.lang.annotation.Target;
 /**
  * 转换类
  * 
- * @author chenbug
+ * @author cold
  * 
- * @version $Id: Converter.java, v 0.1 2012-6-25 下午12:30:46 chenbug Exp $
+ * @version $Id: Converter.java, v 0.1 2012-6-25 下午12:30:46 cold Exp $
  */
 @Target({ ElementType.FIELD })
 @Retention(RetentionPolicy.RUNTIME)

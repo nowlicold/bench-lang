@@ -11,9 +11,9 @@ import com.bench.lang.base.json.value.serializer.JSONSerializer;
 /**
  * 返回Int类型的Boolean值，true为1，false为0
  * 
- * @author chenbug
+ * @author cold
  * 
- * @version $Id: BooleanToIntConverter.java, v 0.1 2012-6-25 下午12:31:14 chenbug
+ * @version $Id: BooleanToIntConverter.java, v 0.1 2012-6-25 下午12:31:14 cold
  *          Exp $
  */
 public class BooleanToIntSerializer implements JSONSerializer {

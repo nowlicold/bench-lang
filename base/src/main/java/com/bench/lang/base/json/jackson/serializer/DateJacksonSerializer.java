@@ -12,10 +12,10 @@ import java.util.Date;
 /**
  * json日期序列化
  * 
- * @author chenbug
+ * @author cold
  *
  * @version $Id: DateJacksonSerializer.java, v 0.1 2017年12月27日 下午12:22:32
- *          chenbug Exp $
+ *          cold Exp $
  */
 public class DateJacksonSerializer extends JsonSerializer<Date> {
 

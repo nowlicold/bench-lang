@@ -10,9 +10,9 @@ import com.bench.lang.base.object.utils.ObjectUtils;
 /**
  * 将对象toString的converter
  * 
- * @author chenbug
+ * @author cold
  * 
- * @version $Id: ToStringConverter.java, v 0.1 2012-6-25 下午12:31:14 chenbug Exp
+ * @version $Id: ToStringConverter.java, v 0.1 2012-6-25 下午12:31:14 cold Exp
  *          $
  */
 public class ToStringSerializer implements JSONSerializer {

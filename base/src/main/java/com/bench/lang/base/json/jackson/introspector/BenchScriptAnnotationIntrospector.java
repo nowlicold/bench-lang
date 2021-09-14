@@ -20,9 +20,9 @@ import java.lang.annotation.Annotation;
 
 /**
  * 
- * @author chenbug
+ * @author cold
  *
- * @version $Id: BenchScriptAnnotationIntrospector.java, v 0.1 2016年3月1日 下午4:57:29 chenbug Exp $
+ * @version $Id: BenchScriptAnnotationIntrospector.java, v 0.1 2016年3月1日 下午4:57:29 cold Exp $
  */
 public class BenchScriptAnnotationIntrospector extends AnnotationIntrospector {
 

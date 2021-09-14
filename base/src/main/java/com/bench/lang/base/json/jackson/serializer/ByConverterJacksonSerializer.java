@@ -18,10 +18,10 @@ import java.io.IOException;
 
 /**
  * 
- * @author chenbug
+ * @author cold
  *
  * @version $Id: ByConvererJacksonSerializer.java, v 0.1 2016年3月1日 下午6:28:45
- *          chenbug Exp $
+ *          cold Exp $
  */
 public class ByConverterJacksonSerializer extends JsonSerializer<Object> {
 

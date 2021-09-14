@@ -16,9 +16,9 @@ import java.util.Date;
 
 /**
  * 
- * @author chenbug
+ * @author cold
  *
- * @version $Id: DateJacksonDeserializer.java, v 0.1 2017年12月27日 下午12:22:21 chenbug Exp $
+ * @version $Id: DateJacksonDeserializer.java, v 0.1 2017年12月27日 下午12:22:21 cold Exp $
  */
 public class DateJacksonDeserializer extends JsonDeserializer<Date> {
 

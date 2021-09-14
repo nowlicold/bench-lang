@@ -27,10 +27,10 @@ import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * 
- * @author chenbug
+ * @author cold
  *
  * @version $Id: BenchJacksonVisibilityChecker.java, v 0.1 2016年3月2日 下午12:13:12
- *          chenbug Exp $
+ *          cold Exp $
  */
 public class BenchJacksonVisibilityChecker implements VisibilityChecker<BenchJacksonVisibilityChecker> {
 

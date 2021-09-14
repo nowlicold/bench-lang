@@ -22,6 +22,58 @@
 		<module>test</module>
 	</modules>
 	<build>
-		
+				<plugins>
+					<plugin>
+						<artifactId>maven-source-plugin</artifactId>
+						<version>3.0.1</version>
+						<executions>
+							<execution>
+								<id>attach-sources</id>
+								<goals>
+									<goal>jar</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
 	</build>
+	<repositories>
+		<repository>
+			<id>yuan-nexus-releases</id>
+			<name>Team Nexus Repository</name>
+			<url>http://18.183.56.236:8081/repository/maven-releases/</url>
+			<layout>default</layout>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>yuan-nexus-snapshots</id>
+			<name>yuan-nexus-snapshots</name>
+			<url>http://18.183.56.236:8081/repository/maven-snapshots/</url>
+			<layout>default</layout>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+				<updatePolicy>always</updatePolicy>
+			</snapshots>
+		</repository>
+	</repositories>
+	<distributionManagement>
+		<repository>
+			<id>yuan-nexus-releases</id>
+			<name>jxmc-nexus-releases</name>
+			<url>http://18.183.56.236:8081/repository/maven-releases/</url>
+		</repository>
+		<snapshotRepository>
+			<id>yuan-nexus-snapshots</id>
+			<name>jxmc-nexus-snapshots</name>
+			<url>http://18.183.56.236:8081/repository/maven-snapshots/</url>
+		</snapshotRepository>
+	</distributionManagement>
 </project>

@@ -8,9 +8,9 @@ import java.lang.annotation.Target;
 /**
  * 日期转成成 "yyyyMMddHHmmssSSS"
  * 
- * @author chenbug
+ * @author cold
  *
- * @version $Id: LongExtraDateFormat.java, v 0.1 2016年12月14日 上午11:16:46 chenbug
+ * @version $Id: LongExtraDateFormat.java, v 0.1 2016年12月14日 上午11:16:46 cold
  *          Exp $
  */
 @Target({ ElementType.FIELD, ElementType.METHOD, ElementType.TYPE })

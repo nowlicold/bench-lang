@@ -25,7 +25,7 @@ import java.lang.annotation.Target;
 /**
  * 属性模式
  * 
- * @author chenbug
+ * @author cold
  */
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
