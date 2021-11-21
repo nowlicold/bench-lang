@@ -8,9 +8,9 @@ import java.util.List;
 /**
  * Cookie解析器
  * 
- * @author chenbug
+ * @author cold
  *
- * @version $Id: CookieParser.java, v 0.1 2019年8月23日 上午8:17:51 chenbug Exp $
+ * @version $Id: CookieParser.java, v 0.1 2019年8月23日 上午8:17:51 cold Exp $
  */
 public class CookieParseUtils {
 

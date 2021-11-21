@@ -13,10 +13,10 @@ import java.util.Date;
 /**
  * 日期转换
  * 
- * @author chenbug
+ * @author cold
  * 
  * @version $Id: Date_PayloadValueConverter.java, v 0.1 2014-8-6 上午10:59:39
- *          chenbug Exp $
+ *          cold Exp $
  */
 public class Date_PayloadValueConverter implements PayloadValueConverter<Date> {
 

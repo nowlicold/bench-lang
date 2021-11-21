@@ -5,9 +5,9 @@ import com.bench.common.enums.EnumBase;
 /**
  * 头部名枚举
  * 
- * @author chenbug
+ * @author cold
  * 
- * @version $Id: HeaderNameEnum.java, v 0.1 2013-3-6 下午3:06:56 chenbug Exp $
+ * @version $Id: HeaderNameEnum.java, v 0.1 2013-3-6 下午3:06:56 cold Exp $
  */
 public enum HeaderNameEnum implements EnumBase {
 

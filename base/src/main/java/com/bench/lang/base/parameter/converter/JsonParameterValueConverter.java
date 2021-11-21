@@ -12,10 +12,10 @@ import java.util.Map;
 
 /**
  * 
- * @author chenbug
+ * @author cold
  * 
  * @version $Id: JsonParameterValueConverter.java, v 0.1 2013年4月22日 下午8:22:08
- *          chenbug Exp $
+ *          cold Exp $
  */
 public class JsonParameterValueConverter implements ParameterValueConverter {
 

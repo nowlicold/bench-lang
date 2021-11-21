@@ -15,9 +15,9 @@ import java.util.*;
 /**
  * 参数工具类
  * 
- * @author chenbug
+ * @author cold
  * 
- * @version $Id: ParameterUtils.java, v 0.1 2013-1-12 下午2:03:05 chenbug Exp $
+ * @version $Id: ParameterUtils.java, v 0.1 2013-1-12 下午2:03:05 cold Exp $
  */
 public class ParameterUtils {
 

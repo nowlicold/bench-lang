@@ -10,9 +10,9 @@ import java.util.zip.ZipInputStream;
 
 /**
  * 
- * @author chenbug
+ * @author cold
  *
- * @version $Id: ZipEntryVisitor.java, v 0.1 2019年6月5日 下午2:45:49 chenbug Exp $
+ * @version $Id: ZipEntryVisitor.java, v 0.1 2019年6月5日 下午2:45:49 cold Exp $
  */
 public interface ZipEntryVisitor {
 

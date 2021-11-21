@@ -17,10 +17,10 @@ import java.util.List;
 /**
  * 集合转换
  * 
- * @author chenbug
+ * @author cold
  * 
  * @version $Id: Date_PayloadValueConverter.java, v 0.1 2014-8-6 上午10:59:39
- *          chenbug Exp $
+ *          cold Exp $
  */
 public class List_PayloadValueConverter implements PayloadValueConverter<List<Object>> {
 

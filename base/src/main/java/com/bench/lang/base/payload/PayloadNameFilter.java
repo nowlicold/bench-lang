@@ -3,9 +3,9 @@ package com.bench.lang.base.payload;
 /**
  * 
  * 
- * @author chenbug
+ * @author cold
  *
- * @version $Id: PayloadNameFilter.java, v 0.1 2015年6月30日 下午3:18:01 chenbug Exp
+ * @version $Id: PayloadNameFilter.java, v 0.1 2015年6月30日 下午3:18:01 cold Exp
  *          $
  */
 public interface PayloadNameFilter {

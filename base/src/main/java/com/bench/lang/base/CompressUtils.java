@@ -13,9 +13,9 @@ import java.io.*;
 /**
  * 压缩工具类
  * 
- * @author chenbug
+ * @author cold
  * 
- * @version $Id: CompressUtils.java, v 0.1 2012-10-31 下午2:22:48 chenbug Exp $
+ * @version $Id: CompressUtils.java, v 0.1 2012-10-31 下午2:22:48 cold Exp $
  */
 public class CompressUtils {
 

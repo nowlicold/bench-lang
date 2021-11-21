@@ -19,7 +19,7 @@ import java.net.URLEncoder;
 import java.util.Enumeration;
 
 /**
- * @author chenbug
+ * @author cold
  * 
  * @version $Id: WebHelper.java,v 1.3 2006/02/07 12:39:01 xishi Exp $
  */

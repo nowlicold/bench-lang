@@ -20,9 +20,9 @@ import java.util.Set;
  * mapParameter.put(....);<br>
  * mapParameter.toParameter();
  * 
- * @author chenbug
+ * @author cold
  * 
- * @version $Id: MapParameter.java, v 0.1 2013-1-17 下午7:44:36 chenbug Exp $
+ * @version $Id: MapParameter.java, v 0.1 2013-1-17 下午7:44:36 cold Exp $
  */
 public class MapParameter implements Map<String, String>, Serializable {
 

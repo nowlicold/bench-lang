@@ -11,10 +11,10 @@ import java.util.Map;
 
 /**
  * 
- * @author chenbug
+ * @author cold
  * 
  * @version $Id: CommonParameterValueConverter.java, v 0.1 2013年4月22日 下午8:18:08
- *          chenbug Exp $
+ *          cold Exp $
  */
 public class CommonParameterValueConverter implements ParameterValueConverter {
 

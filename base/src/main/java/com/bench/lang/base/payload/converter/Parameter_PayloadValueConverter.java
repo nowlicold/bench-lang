@@ -12,10 +12,10 @@ import org.dom4j.Element;
 /**
  * 参数转换
  * 
- * @author chenbug
+ * @author cold
  * 
  * @version $Id: Date_PayloadValueConverter.java, v 0.1 2014-8-6 上午10:59:39
- *          chenbug Exp $
+ *          cold Exp $
  */
 public class Parameter_PayloadValueConverter implements PayloadValueConverter<Parameter> {
 

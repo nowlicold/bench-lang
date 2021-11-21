@@ -15,10 +15,10 @@ import java.util.Map;
 
 /**
  * 
- * @author chenbug
+ * @author cold
  * 
  * @version $Id: PayloadValueConverterManager.java, v 0.1 2014-8-6 上午11:02:09
- *          chenbug Exp $
+ *          cold Exp $
  */
 public class PayloadValueConverterManager {
 

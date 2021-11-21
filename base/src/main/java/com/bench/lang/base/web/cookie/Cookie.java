@@ -6,9 +6,9 @@ package com.bench.lang.base.web.cookie;
 
 /**
  * 
- * @author chenbug
+ * @author cold
  *
- * @version $Id: Cookie.java, v 0.1 2019年8月23日 上午8:20:35 chenbug Exp $
+ * @version $Id: Cookie.java, v 0.1 2019年8月23日 上午8:20:35 cold Exp $
  */
 public class Cookie extends javax.servlet.http.Cookie {
 

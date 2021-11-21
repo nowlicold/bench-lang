@@ -13,7 +13,7 @@ import java.util.Map;
 /**
  * payload从xml到payload，payload到xml转换器
  * 
- * @author chenbug
+ * @author cold
  *
  * @version $Id: PayloadConverter.java, v 0.1 2015年7月3日 下午12:08:59 Administrator
  *          Exp $

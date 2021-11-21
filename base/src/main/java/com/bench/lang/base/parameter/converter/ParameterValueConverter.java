@@ -8,10 +8,10 @@ import java.util.Map;
 /**
  * 参数值转换器
  * 
- * @author chenbug
+ * @author cold
  * 
  * @version $Id: ParameterValueConverter.java, v 0.1 2013年4月22日 下午7:44:56
- *          chenbug Exp $
+ *          cold Exp $
  */
 public interface ParameterValueConverter {
 

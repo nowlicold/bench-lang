@@ -6,9 +6,9 @@ import org.dom4j.Element;
 /**
  * payload的值转换器,将值转换成xml,后者从xml转换
  * 
- * @author chenbug
+ * @author cold
  * 
- * @version $Id: PayloadValueConverter.java, v 0.1 2014-8-4 上午12:55:31 chenbug
+ * @version $Id: PayloadValueConverter.java, v 0.1 2014-8-4 上午12:55:31 cold
  *          Exp $
  */
 public interface PayloadValueConverter<T> {

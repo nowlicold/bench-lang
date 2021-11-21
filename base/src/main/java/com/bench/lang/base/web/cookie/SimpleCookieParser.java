@@ -24,9 +24,9 @@ import com.bench.common.model.StringKV;
 /**
  * 简单cookie解析器，只能解析<code> k=v; </code>方式的cookie
  * 
- * @author chenbug
+ * @author cold
  *
- * @version $Id: SimpleCookieParser.java, v 0.1 2016年2月24日 下午12:57:20 chenbug
+ * @version $Id: SimpleCookieParser.java, v 0.1 2016年2月24日 下午12:57:20 cold
  *          Exp $
  */
 public class SimpleCookieParser {

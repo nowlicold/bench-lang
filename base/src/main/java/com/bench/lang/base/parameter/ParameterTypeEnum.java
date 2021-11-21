@@ -8,9 +8,9 @@ import com.bench.common.enums.EnumBase;
 
 /**
  * 
- * @author chenbug
+ * @author cold
  * 
- * @version $Id: ParameterTypeEnum.java, v 0.1 2013-1-3 下午7:41:22 chenbug Exp $
+ * @version $Id: ParameterTypeEnum.java, v 0.1 2013-1-3 下午7:41:22 cold Exp $
  */
 public enum ParameterTypeEnum implements EnumBase {
 

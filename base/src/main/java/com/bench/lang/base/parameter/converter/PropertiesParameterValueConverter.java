@@ -11,10 +11,10 @@ import java.util.Map;
 
 /**
  * 
- * @author chenbug
+ * @author cold
  * 
  * @version $Id: PropertiesParameterValueConverter.java, v 0.1 2013年4月22日
- *          下午8:23:10 chenbug Exp $
+ *          下午8:23:10 cold Exp $
  */
 public class PropertiesParameterValueConverter implements ParameterValueConverter {
 

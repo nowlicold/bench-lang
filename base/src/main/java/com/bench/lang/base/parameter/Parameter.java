@@ -3,9 +3,9 @@ package com.bench.lang.base.parameter;
 /**
  * 参数
  * 
- * @author chenbug
+ * @author cold
  * 
- * @version $Id: Parameter.java, v 0.1 2013-1-4 下午12:03:08 chenbug Exp $
+ * @version $Id: Parameter.java, v 0.1 2013-1-4 下午12:03:08 cold Exp $
  */
 public class Parameter extends ParameterBase {
 

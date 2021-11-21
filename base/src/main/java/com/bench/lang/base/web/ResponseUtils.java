@@ -30,7 +30,7 @@ import java.util.*;
 /**
  * RequestUtils
  * 
- * @author chenbug
+ * @author cold
  */
 public final class ResponseUtils {
 

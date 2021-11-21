@@ -30,9 +30,9 @@ import javax.servlet.http.HttpServletResponse;
  * Set-Cookie: BD_HOME=0; path=/<br>
  * Set-Cookie: H_PS_PSSID=1439_21078_18560_29523_29518_29098_29567_29220_26350_29071; path=/; domain=.baidu.com<br>
  * 
- * @author chenbug
+ * @author cold
  * 
- * @version $Id: CookieUtils.java, v 0.1 2013-10-24 下午12:47:46 chenbug Exp $
+ * @version $Id: CookieUtils.java, v 0.1 2013-10-24 下午12:47:46 cold Exp $
  */
 public class CookieUtils {
 

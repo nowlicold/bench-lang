@@ -10,11 +10,11 @@
         <module name="bench-lang-test" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="8">
+    <bytecodeTargetLevel>
       <module name="bench-lang-base" target="8" />
-      <module name="bench-lang-parent" target="8" />
-      <module name="bench-lang-provider" target="8" />
-      <module name="bench-lang-test" target="8" />
+      <module name="bench-lang-parent" target="1.8" />
+      <module name="bench-lang-provider" target="1.8" />
+      <module name="bench-lang-test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

@@ -22,9 +22,9 @@ import java.util.*;
 /**
  * 消息数据载体
  * 
- * @author chenbug
+ * @author cold
  * 
- * @version $Id: MessagePayload.java, v 0.1 2014-7-21 下午6:11:13 chenbug Exp $
+ * @version $Id: MessagePayload.java, v 0.1 2014-7-21 下午6:11:13 cold Exp $
  */
 public class Payload extends BaseModel {
 
