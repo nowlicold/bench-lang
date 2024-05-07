@@ -45,7 +45,7 @@ import java.util.*;
  *
  * @version $Id: JackSonUtils.java, v 0.1 2016年2月29日 下午5:41:19 cold Exp $
  */
-public class SnakeCaseJacksonUtils {
+public class JacksonSnakeCaseUtils {
 
 	private static ObjectMapper objectMapper = new ObjectMapper();
 
@@ -428,7 +428,7 @@ public class SnakeCaseJacksonUtils {
 	 * @return
 	 */
 	public static Map<String, String> toStringMap(String content) {
-		JsonNode jsonNode = SnakeCaseJacksonUtils.parseJson(content);
+		JsonNode jsonNode = JacksonSnakeCaseUtils.parseJson(content);
 		return toMap(jsonNode);
 	}
 
@@ -512,10 +512,10 @@ public class SnakeCaseJacksonUtils {
 		for (int i = 0; i < arrayLength; i++) {
 			// 如果是最后一个维度，则生成Object列表
 			if (lengths.size() == currentDimension + 1) {
-				SnakeCaseJacksonUtils.add(parentNode, creater.create());
+				JacksonSnakeCaseUtils.add(parentNode, creater.create());
 				continue;
 			}
-			ArrayNode childArrayNode = SnakeCaseJacksonUtils.createArrayNode();
+			ArrayNode childArrayNode = JacksonSnakeCaseUtils.createArrayNode();
 			parentNode.add(childArrayNode);
 			int childDimension = currentDimension + 1;
 			if (childDimension < lengths.size()) {
@@ -532,7 +532,7 @@ public class SnakeCaseJacksonUtils {
 	 * @return
 	 */
 	public static <OBJ extends Object> ArrayNode createMultiDimensionArrayNode(List<MinMax> dimensionLength, ObjectCreater<OBJ> creater) {
-		ArrayNode rootNode = SnakeCaseJacksonUtils.createArrayNode();
+		ArrayNode rootNode = JacksonSnakeCaseUtils.createArrayNode();
 		createChildMultiDimensionArrayNode(rootNode, 0, dimensionLength, creater);
 		return rootNode;
 	}
