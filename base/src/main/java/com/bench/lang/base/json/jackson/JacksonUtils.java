@@ -19,6 +19,7 @@ import com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.core.JsonFactory;
 import com.fasterxml.jackson.core.Version;
+import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -354,6 +355,28 @@ public class JacksonUtils {
 		}
 		try {
 			return objectMapper.readValue(content, clasz);
+		} catch (Exception e) {
+			throw new BenchRuntimeException(CommonErrorCodeEnum.SYSTEM_ERROR, "解析json字符串异常,content=" + content, e);
+		}
+	}
+
+	/**
+	 * <p>
+	 * json字符串反序列化成泛型对象，一般是List,Map
+	 * </p>
+	 *
+	 * @param content content
+	 * @param valueTypeRef valueTypeRef
+	 * @return T
+	 * @author Karl
+	 * @since 2024/9/14 9:49
+	 */
+	public static <T> T parseJson(String content, TypeReference<T> valueTypeRef) {
+		if (StringUtils.isEmpty(content)) {
+			return null;
+		}
+		try {
+			return objectMapper.readValue(content, valueTypeRef);
 		} catch (Exception e) {
 			throw new BenchRuntimeException(CommonErrorCodeEnum.SYSTEM_ERROR, "解析json字符串异常,content=" + content, e);
 		}
